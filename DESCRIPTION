@@ -1,0 +1,14 @@
+Package: hercipeds
+Title: Work with data from the Integrated Postsecondary Education Data System
+Version: 0.0.0.9000
+Authors@R: 
+    person("Ben", "Taft", , "ben.taft@career2cradle.org", role = c("aut", "cre"))
+Description:
+    IPEDS contains data in many different tables. The format is well-defined,
+    but not particularly tidy. This package wrangles the data into tidy format
+    and translates the machine-readable field names with their human-readable
+    equivalents.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
