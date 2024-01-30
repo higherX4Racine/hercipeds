@@ -1,0 +1,42 @@
+Column,DataType,Definition,Population,Gender
+UNITID,i,Unique identification number of the institution,,
+CSTOTLT,i,Grand total,All,All
+CSTOTLM,i,Grand total men,All,Male
+CSTOTLW,i,Grand total women,All,Female
+CSAIANT,i,American Indian or Alaska Native total,American Indian or Alaska Native,All
+CSAIANM,i,American Indian or Alaska Native men,American Indian or Alaska Native,Male
+CSAIANW,i,American Indian or Alaska Native women,American Indian or Alaska Native,Female
+CSASIAT,i,Asian total,Asian,All
+CSASIAM,i,Asian men,Asian,Male
+CSASIAW,i,Asian women,Asian,Female
+CSBKAAT,i,Black or African American total,Black or African American,All
+CSBKAAM,i,Black or African American men,Black or African American,Male
+CSBKAAW,i,Black or African American women,Black or African American,Female
+CSHISPT,i,Hispanic or Latino total,Hispanic or Latino,All
+CSHISPM,i,Hispanic or Latino men,Hispanic or Latino,Male
+CSHISPW,i,Hispanic or Latino women,Hispanic or Latino,Female
+CSNHPIT,i,Native Hawaiian or Other Pacific Islander total,Native Hawaiian or Other Pacific Islander,All
+CSNHPIM,i,Native Hawaiian or Other Pacific Islander men,Native Hawaiian or Other Pacific Islander,Male
+CSNHPIW,i,Native Hawaiian or Other Pacific Islander women,Native Hawaiian or Other Pacific Islander,Female
+CSWHITT,i,White total,White,All
+CSWHITM,i,White men,White,Male
+CSWHITW,i,White women,White,Female
+CS2MORT,i,Two or more races total,Two or more races,All
+CS2MORM,i,Two or more races men,Two or more races,Male
+CS2MORW,i,Two or more races women,Two or more races,Female
+CSUNKNT,i,Race/ethnicity unknown total,Race/ethnicity unknown,All
+CSUNKNM,i,Race/ethnicity unknown men,Race/ethnicity unknown,Male
+CSUNKNW,i,Race/ethnicity unknown women,Race/ethnicity unknown,Female
+CSNRALT,i,U.S. Nonresident total,Nonresident,All
+CSNRALM,i,U.S. Nonresident men,Nonresident,Male
+CSNRALW,i,U.S. Nonresident women,Nonresident,Female
+CSGUUGUN,i,Undergraduate gender unknown,All,Unknown
+CSGUUGAG,i,Undergraduate another gender,All,Another
+CSGUUGTT,i,Undergraduate gender unknown and another gender,All,Unknown and Another
+CSGUGUN,i,Graduate gender unknown,All,Unknown
+CSGUGAG,i,Graduate another gender,All,Another
+CSGUGTOT,i,Graduate gender unknown and another gender,All,Unknown and Another
+CSGUTOTUN,i,Total gender unknown,All,Unknown
+CSGUTOTAG,i,Total another gender,All,Another
+CSGUTOT,i,Total of gender unknown and  another gender,All,Unknown and Another
+CSGUKN,i,Total gender reported as one of the mutually exclusive binary categories (Men/Women),All,Binary

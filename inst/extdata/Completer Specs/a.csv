@@ -1,0 +1,35 @@
+﻿Column,DataType,Definition,Population,Gender
+UNITID,i,Unique identification number of the institution,,
+CIPCODE,c,CIP Code -  2020 Classification,,
+MAJORNUM,i,First or Second Major,,
+AWLEVEL,i,Award Level code,,
+CTOTALT,i,Grand total,All,All
+CTOTALM,i,Grand total men,All,Male
+CTOTALW,i,Grand total women,All,Female
+CAIANT,i,American Indian or Alaska Native total,American Indian or Alaska Native,All
+CAIANM,i,American Indian or Alaska Native men,American Indian or Alaska Native,Male
+CAIANW,i,American Indian or Alaska Native women,American Indian or Alaska Native,Female
+CASIAT,i,Asian total,Asian,All
+CASIAM,i,Asian men,Asian,Male
+CASIAW,i,Asian women,Asian,Female
+CBKAAT,i,Black or African American total,Black or African American,All
+CBKAAM,i,Black or African American men,Black or African American,Male
+CBKAAW,i,Black or African American women,Black or African American,Female
+CHISPT,i,Hispanic or Latino total,Hispanic or Latino,All
+CHISPM,i,Hispanic or Latino men,Hispanic or Latino,Male
+CHISPW,i,Hispanic or Latino women,Hispanic or Latino,Female
+CNHPIT,i,Native Hawaiian or Other Pacific Islander total,Native Hawaiian or Other Pacific Islander,All
+CNHPIM,i,Native Hawaiian or Other Pacific Islander men,Native Hawaiian or Other Pacific Islander,Male
+CNHPIW,i,Native Hawaiian or Other Pacific Islander women,Native Hawaiian or Other Pacific Islander,Female
+CWHITT,i,White total,White,All
+CWHITM,i,White men,White,Male
+CWHITW,i,White women,White,Female
+C2MORT,i,Two or more races total,Two or more races,All
+C2MORM,i,Two or more races men,Two or more races,Male
+C2MORW,i,Two or more races women,Two or more races,Female
+CUNKNT,i,Race/ethnicity unknown total,Unknown,All
+CUNKNM,i,Race/ethnicity unknown men,Unknown,Male
+CUNKNW,i,Race/ethnicity unknown women,Unknown,Female
+CNRALT,i,U.S. Nonresident total,Nonresident,All
+CNRALM,i,U.S. Nonresident men,Nonresident,Male
+CNRALW,i,U.S. Nonresident women,Nonresident,Female
