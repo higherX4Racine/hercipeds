@@ -9,7 +9,7 @@ wrangle_completers(.conn, .spec)
 \arguments{
 \item{.conn}{\if{html}{\out{<chr>}} a suitable input to \code{\link[readr:read_delim]{readr::read_csv()}}, as from \code{\link[=unzip_completers]{unzip_completers()}}}
 
-\item{.spec}{\if{html}{\out{<tibble>}} one of the elements of \link{COMPLETERS_SPEC}}
+\item{.spec}{\if{html}{\out{<tibble>}} one of the elements of \code{COMPLETERS_SPEC}}
 }
 \value{
 a tibble of college completion data, aggregated according to \code{.spec}

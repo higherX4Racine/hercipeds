@@ -19,6 +19,6 @@ unzip_completers <- function(.year, .aggregation, .path){
             sprintf("C%04d_%s.zip", .year, .agg)
         ) |>
         archive::archive_read(
-            file = sprintf("c%04d_%s.csv", .year, tolower(.aggregation))
+            file = 1L
         )
 }

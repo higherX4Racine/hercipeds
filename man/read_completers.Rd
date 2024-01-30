@@ -15,7 +15,7 @@ read_completers(.year, .path = ".", .aggregation = "C")
 }
 \value{
 a data frame with approximately 5 columns:
-\description{
+\describe{
 \item{UNITID}{\if{html}{\out{<int>}} The unique identifier of a single higher education institution}
 \item{Population}{\if{html}{\out{<chr>}} A demographic group like "US Residents", "Asian", or "18-24"}
 \item{Gender}{\if{html}{\out{<chr>}} Usually "Female" or "Male", but possibly "Another" or "Unknown"}

@@ -34,7 +34,7 @@
 #' @param .aggregation <chr>, optional - "A", "B", or "C" (the default), see Notes
 #'
 #' @return a data frame with approximately 5 columns:
-#' \description{
+#' \describe{
 #'  \item{UNITID}{<int> The unique identifier of a single higher education institution}
 #'  \item{Population}{<chr> A demographic group like "US Residents", "Asian", or "18-24"}
 #'  \item{Gender}{<chr> Usually "Female" or "Male", but possibly "Another" or "Unknown"}
@@ -48,6 +48,6 @@ read_completers <- function(.year, .path = ".", .aggregation = "C"){
             .path
         ) |>
         wrangle_completers(
-            hercipeds:::COMPLETERS_SPEC[[toupper(.aggregation)]]
+            COMPLETERS_SPEC[[toupper(.aggregation)]]
         )
 }

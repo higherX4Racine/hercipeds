@@ -1,7 +1,7 @@
 #' Render IPEDS college completion data into a long, tidy tibble. 
 #'
 #' @param .conn <chr> a suitable input to [readr::read_csv()], as from [unzip_completers()]
-#' @param .spec <tibble> one of the elements of [hercipeds::COMPLETERS_SPEC]
+#' @param .spec <tibble> one of the elements of `COMPLETERS_SPEC`
 #'
 #' @return a tibble of college completion data, aggregated according to `.spec`
 #' @seealso [unzip_completers()]

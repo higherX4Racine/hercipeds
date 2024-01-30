@@ -1,7 +1,7 @@
 # Copyright (C) 2024 by Higher Expectations for Racine County
 
 .EXTDATA_PATH <- system.file("extdata",
-                             "Completer Specs",
+                             "Completer_Specs",
                              package = "hercipeds")
 
 .COL_TYPES <- list(
@@ -22,4 +22,16 @@ COMPLETERS_SPEC <- purrr::imap(
         readr::read_csv(col_types = .x)
 )
 
-usethis::use_data(COMPLETERS_SPEC, overwrite = TRUE, internal = TRUE)
+DIRECTORY_SPEC <- "extdata" |>
+    system.file(
+        "directory_spec.csv",
+        package = "hercipeds"
+    ) |>
+    readr::read_csv(
+        col_types = "c"
+    )
+
+usethis::use_data(COMPLETERS_SPEC,
+                  DIRECTORY_SPEC,
+                  overwrite = TRUE,
+                  internal = TRUE)
