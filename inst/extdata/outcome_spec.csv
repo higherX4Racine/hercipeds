@@ -1,0 +1,29 @@
+﻿Column,DataType,Definition,Time to Degree,Degree
+UNITID,i,Unique identification number of the institution,,
+OMCHRT,i,Cohort category,,
+OMRCHRT,i,2014-15 cohort,,
+OMEXCLS,i,Exclusions to 2014-15 cohort,,
+OMACHRT,i,Adjusted 2014-15 cohort,,
+OMCERT4,i,"Number of adjusted cohort receiving a certificate at 4 years (August 31, 2018)",4,Certificate
+OMASSC4,i,"Number of adjusted cohort receiving an Associate's degree at 4 years (August 31, 2018)",4,Associate's
+OMBACH4,i,"Number of adjusted cohort receiving a Bachelor's degree at 4 years (August 31, 2018)",4,Bachelor's
+OMAWDN4,i,"Number of adjusted cohort receiving an award at 4 years (August 31, 2018)",4,All
+OMAWDP4,n,"Percent of adjusted cohort receiving an award at 4 years (August 31, 2018)",4,All
+OMCERT6,i,"Number of adjusted cohort receiving a certificate at 6 years (August 31, 2020)",6,Certificate
+OMASSC6,i,"Number of adjusted cohort receiving an Associate's degree at 6 years (August 31, 2020)",6,Associate's
+OMBACH6,i,"Number of adjusted cohort receiving a Bachelor's degree at 6 years (August 31, 2020)",6,Bachelor's
+OMAWDN6,i,"Number of adjusted cohort receiving an award at 6 years (August 31, 2020)",6,All
+OMAWDP6,n,"Percent of adjusted cohort receiving an award at 6 years (August 31, 2020)",6,All
+OMCERT8,i,"Number of adjusted cohort receiving a certificate at 8 years (August 31, 2022)",8,Certificate
+OMASSC8,i,"Number of adjusted cohort receiving an Associate's degree at 8 years (August 31, 2022)",8,Associate's
+OMBACH8,i,"Number of adjusted cohort receiving a Bachelor's degree at 8 years (August 31, 2022)",8,Bachelor's
+OMAWDN8,i,"Number of adjusted cohort receiving an award at 8 years (August 31, 2022)",8,All
+OMENRYI,i,"Number of adjusted cohort still enrolled at your institution at 8 years (August 31, 2022)",8,All
+OMENRAI,i,"Number of adjusted cohort who enrolled subsequently at another institution at 8 years (August 31, 2022)",8,None
+OMENRUN,i,"Number of adjusted cohort whose subsequent enrollment status is unknown at 8 years (August 31, 2022)",8,Unknown
+OMNOAWD,i,"Number of adjusted cohort who did not receive an award from your institution at 8 years (August 31, 2022)",8,None
+OMAWDP8,n,"Percent of adjusted cohort receiving an award at 8 years (August 31, 2022)",8,All
+OMENRTP,n,"Percent of adjusted cohort still or subsequently enrolled at 8 years (August 31, 2022)",8,None
+OMENRYP,n,"Percent of adjusted cohort still enrolled at your institution at 8 years (August 31, 2022)",8,None
+OMENRAP,n,"Percent of adjusted cohort  enrolled subsequently at another institution at 8 years (August 31, 2022)",8,None
+OMENRUP,n,"Percent of adjusted cohort  enrollment status unknown at 8 years (August 31, 2022)",8,Unknown

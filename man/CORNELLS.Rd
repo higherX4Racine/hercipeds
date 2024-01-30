@@ -3,19 +3,21 @@
 \docType{data}
 \name{CORNELLS}
 \alias{CORNELLS}
-\title{IPEDS from 2022 for schools with "Cornell" in their names.}
+\title{IPEDS data from 2022 for schools with "Cornell" in their names.}
 \format{
-\subsection{\code{cornells}}{
+\subsection{\code{CORNELLS}}{
 
 A list with two elements.
 \subsection{Directory}{
 
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 3 rows and 73 columns.
+Detailed characteristics of each institution in 2022.
 }
 
 \subsection{Completers}{
 
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 36 columns.
+Graduates in 2022 by population from each institution.
 }
 
 }
@@ -27,6 +29,6 @@ An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, 
 CORNELLS
 }
 \description{
-IPEDS from 2022 for schools with "Cornell" in their names.
+IPEDS data from 2022 for schools with "Cornell" in their names.
 }
 \keyword{datasets}

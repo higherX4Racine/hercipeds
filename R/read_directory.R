@@ -19,8 +19,8 @@ read_directory <- function(.year, .path){
             file = 1L
         ) |>
         readr::read_csv(
-            col_types = DIRECTORY_SPEC$DataType |>
-                rlang::set_names(DIRECTORY_SPEC$Column) |>
+            col_types = hercipeds::DIRECTORY_SPEC$DataType |>
+                rlang::set_names(hercipeds::DIRECTORY_SPEC$Column) |>
                 c(.default = "_"),
             na = c("", -1:-9)
         ) |>

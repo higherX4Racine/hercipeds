@@ -22,16 +22,5 @@ COMPLETERS_SPEC <- purrr::imap(
         readr::read_csv(col_types = .x)
 )
 
-DIRECTORY_SPEC <- "extdata" |>
-    system.file(
-        "directory_spec.csv",
-        package = "hercipeds"
-    ) |>
-    readr::read_csv(
-        col_types = "c"
-    )
-
 usethis::use_data(COMPLETERS_SPEC,
-                  DIRECTORY_SPEC,
-                  overwrite = TRUE,
-                  internal = TRUE)
+                  overwrite = TRUE)

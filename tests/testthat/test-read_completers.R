@@ -1,6 +1,6 @@
-require(withr)
-
 test_that("the example completion table is readable", {
+    require(withr)
+    
     with_file(
         list(
             "c0099_c.csv" = write.csv(hercipeds::CORNELLS$Completers,
