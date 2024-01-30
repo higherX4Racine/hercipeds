@@ -1,0 +1,20 @@
+Column,DataType,Definition,Population,Gender,Lower Age,Upper Age
+UNITID,i,Unique identification number of the institution,,,,
+AWLEVELC,i,Award Level code,,,,
+CSTOTLT,i,Grand total,All,All,0,999
+CSTOTLM,i,Grand total men,All,Male,0,999
+CSTOTLW,i,Grand total women,All,Female,0,999
+CSAIANT,i,American Indian or Alaska Native total,American Indian or Alaska Native,All,0,999
+CSASIAT,i,Asian total,Asian,All,0,999
+CSBKAAT,i,Black or African American total,Black or African American,All,0,999
+CSHISPT,i,Hispanic or Latino total,Hispanic or Latino,All,0,999
+CSNHPIT,i,Native Hawaiian or Other Pacific Islander total,Native Hawaiian or Other Pacific Islander,All,0,999
+CSWHITT,i,White total,White,All,0,999
+CS2MORT,i,Two or more races total,Two or more races,All,0,999
+CSUNKNT,i,Race/ethnicity unknown total,Race/ethnicity unknown,All,0,999
+CSNRALT,i,U.S. Nonresident total,Nonresident,All,0,999
+CSUND18,i,"Ages, under 18",All,All,0,17
+CS18_24,i,"Ages, 18-24",All,All,18,24
+CS25_39,i,"Ages, 25-39",All,All,25,39
+CSABV40,i,"Ages, 40 and above",All,All,40,999
+CSUNKN,i,Age unknown,All,All,,
