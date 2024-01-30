@@ -1,0 +1,16 @@
+﻿OMCHRT,Entry Status,Time Status,Aid Status
+10,First-time,Full-time,All
+11,First-time,Full-time,Pell Grant recipients
+12,First-time,Full-time,Non-Pell Grant recipients
+20,First-time,Part-time,All
+21,First-time,Part-time,Pell Grant recipients
+22,First-time,Part-time,Non-Pell Grant recipients
+30,Non-first-time,Full-time,All
+31,Non-first-time,Full-time,Pell Grant recipients
+32,Non-first-time,Full-time,Non-Pell Grant recipients
+40,Non-first-time,Part-time,All
+41,Non-first-time,Part-time,Pell Grant recipients
+42,Non-first-time,Part-time,Non-Pell Grant recipients
+50,All,All,All
+51,All,All,Pell Grant recipients
+52,All,All,Non-Pell Grant recipients

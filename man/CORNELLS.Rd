@@ -20,6 +20,12 @@ An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, 
 Graduates in 2022 by population from each institution.
 }
 
+\subsection{Outcomes}{
+
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 20 rows and 54 columns.
+Overall 4-, 6-, and 8-year completion from each institution
+}
+
 }
 }
 \source{

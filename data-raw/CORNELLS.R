@@ -15,16 +15,24 @@ withr::with_file(fn, {
         dplyr::filter(stringr::str_detect(.data$INSTNM, "Cornell"))
 })
 
-withr::with_file(fn, {
-    
-    curl::curl_download("https://nces.ed.gov/ipeds/datacenter/data/C2022_C.zip",
-                        destfile = fn)
-    
-    CORNELLS$Completers <- fn |>
-        archive::archive_read(file = 1L) |>
-        readr::read_csv(col_types = "c") |>
-        dplyr::semi_join(CORNELLS$Directory,
-                         by = "UNITID")
-})
+list(
+    Completers = "C2022_C",
+    Outcomes = "OM2022"
+) |>
+    purrr::iwalk(function(.base, .key){
+        withr::with_file(fn, {
+            
+            "https://nces.ed.gov/ipeds/datacenter/data/{.base}.zip" |>
+                glue::glue() |>
+                curl::curl_download(destfile = fn)
+            
+            CORNELLS[[.key]] <<- fn |>
+                archive::archive_read(file = 1L) |>
+                readr::read_csv(col_types = "c") |>
+                dplyr::semi_join(CORNELLS$Directory,
+                                 by = "UNITID")
+        })
+        
+    })
 
 usethis::use_data(CORNELLS, overwrite = TRUE)

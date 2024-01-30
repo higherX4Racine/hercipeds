@@ -1,3 +1,5 @@
+# Copyright (C) 2024 by Higher Expectations for Racine County
+
 test_that("the example completion table is readable", {
     require(withr)
     

@@ -1,8 +1,8 @@
-﻿Column,DataType,Definition,Time to Degree,Degree
+Column,DataType,Definition,Time to Degree,Degree
 UNITID,i,Unique identification number of the institution,,
 OMCHRT,i,Cohort category,,
 OMRCHRT,i,2014-15 cohort,,
-OMEXCLS,i,Exclusions to 2014-15 cohort,,
+OMEXCLS,_,Exclusions to 2014-15 cohort,,
 OMACHRT,i,Adjusted 2014-15 cohort,,
 OMCERT4,i,"Number of adjusted cohort receiving a certificate at 4 years (August 31, 2018)",4,Certificate
 OMASSC4,i,"Number of adjusted cohort receiving an Associate's degree at 4 years (August 31, 2018)",4,Associate's
