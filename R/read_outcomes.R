@@ -7,6 +7,12 @@
 #' @importFrom archive archive_read
 #' @importFrom readr read_csv
 #' @importFrom rlang set_names
+#' @importFrom tidy pivot_longer
+#' @importFrom tidyselect any_of
+#' @importFrom dplyr inner_join
+#' @importFrom dplyr select
+#' @importFrom tidyr pivot_wider
+#' @importFrom dplyr mutate
 #' @export
 read_outcomes <- function(.year, .path){
     .path |>
@@ -36,6 +42,11 @@ read_outcomes <- function(.year, .path){
                                                 "Definition"))),
             by = "Column"
         ) |>
+        tidyr::pivot_wider(
+            names_from = "Measure",
+            values_from = "Students",
+            values_fill = 0
+        ) |>
         dplyr::inner_join(
             hercipeds::OMCHRT,
             by = "OMCHRT"
@@ -44,6 +55,7 @@ read_outcomes <- function(.year, .path){
             !tidyselect::any_of(c("Column", "OMCHRT"))
         ) |>
         dplyr::mutate(
+            Count = as.integer(.data$Count),
             `Fall Year` = .year - 8L
         )
 }
