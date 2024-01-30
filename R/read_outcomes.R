@@ -31,7 +31,7 @@ read_outcomes <- function(.year, .path){
             values_to = "Students"
         ) |>
         dplyr::inner_join(
-            dplyr::select(OUTCOMES_SPEC,
+            dplyr::select(hercipeds::OUTCOMES_SPEC,
                           !tidyselect::any_of(c("DataType",
                                                 "Definition"))),
             by = "Column"
