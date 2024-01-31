@@ -7,7 +7,7 @@
 \format{
 \subsection{\code{OUTCOMES_SPEC}}{
 
-In addition to the basic ID and name info, lots of fields about location and programming
+Entering class from 8 years in the past, numbers and percentages for a variety of student groups
 }
 }
 \source{
