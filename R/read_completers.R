@@ -48,6 +48,6 @@ read_completers <- function(.year, .path = ".", .aggregation = "C"){
             .path
         ) |>
         wrangle_completers(
-            hercipeds::COMPLETERS_SPEC[[toupper(.aggregation)]]
+            COMPLETERS_SPEC[[toupper(.aggregation)]]
         )
 }

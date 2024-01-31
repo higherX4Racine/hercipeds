@@ -8,14 +8,16 @@
 #' @return a tibble of many columns
 #' @importFrom archive archive_read
 #' @importFrom readr read_csv
-#' @importFrom rlang set_names
 #' @importFrom dplyr mutate
 #' @importFrom dplyr row_number
-#' @importFrom tidyr pivot_longer
-#' @importFrom tidyselect any_of
-#' @importFrom dplyr inner_join
+#' @importFrom purrr map
 #' @importFrom dplyr select
-#' @importFrom tidyr pivot_wider
+#' @importFrom tidyselect all_of
+#' @importFrom utils tail
+#' @importFrom purrr imap
+#' @importFrom tidyr pivot_longer
+#' @importFrom purrr pluck
+#' @importFrom dplyr inner_join
 #' @export
 read_outcomes <- function(.year, .path){
     .initial <- .path |>
@@ -37,9 +39,9 @@ read_outcomes <- function(.year, .path){
             ~ dplyr::select(.initial,
                             tidyselect::all_of(c("Index", .x)))
         )
-
+    
     .measures <- .subsets |>
-        tail(2) |>
+        utils::tail(2) |>
         purrr::imap(
             ~ tidyr::pivot_longer(.x,
                                   cols = !"Index",
@@ -51,7 +53,7 @@ read_outcomes <- function(.year, .path){
                                   .x,
                                   "Column")
         )
-
+    
     .subsets |>
         purrr::pluck(
             "Common"
@@ -71,30 +73,17 @@ read_outcomes <- function(.year, .path){
 
 ## Helpers
 
-.OUTCOME_TYPES <- hercipeds::OUTCOMES_SPEC$DataType |>
-    rlang::set_names(hercipeds::OUTCOMES_SPEC$Column) |>
-    c(.default = "_")
 
-.COLUMNS <- c("Common", "Count", "Percent") |>
-    rlang::set_names() |>
-    purrr::map(~ hercipeds::OUTCOMES_SPEC |>
-                   dplyr::filter(.data$Measure == .x,
-                                 .data$DataType != "_",
-                                 .data$DataType != "-") |>
-                   dplyr::pull("Column"))
-
-.MEASURE_COLUMNS <- hercipeds::OUTCOMES_SPEC |>
-    names() |>
-    setdiff(c("Column",
-              "DataType",
-              "Definition",
-              "Measure")
-    )
-
-.MEASURE_SPEC <- dplyr::select(hercipeds::OUTCOMES_SPEC,
-                               tidyselect::all_of(c("Column",
-                                                    .MEASURE_COLUMNS)))
-
+#' A common task is to connect to tables by a common foreign key, then drop the key
+#'
+#' @param .lhs one table
+#' @param .rhs another one to join it to
+#' @param .keys the column(s) to join them by
+#'
+#' @return a new table
+#' @importFrom dplyr inner_join
+#' @importFrom dplyr select
+#' @importFrom tidyselect any_of
 .join_and_drop_keys <- function(.lhs, .rhs, .keys){
     .lhs |>
         dplyr::inner_join(.rhs, by = .keys) |>

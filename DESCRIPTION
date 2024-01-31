@@ -23,6 +23,7 @@ Imports:
     archive,
     dplyr,
     lubridate,
+    purrr,
     readr,
     rlang,
     tidyr,
