@@ -7,19 +7,20 @@ test_that("the example outcome table is readable", {
                   row.names = FALSE)
         zip("OM0099.zip", "om0099.csv")
         folks <- read_outcomes(99, ".")
-        expect_equal(nrow(folks), 460L)
-        expect_equal(ncol(folks), 11L)
+        expect_equal(nrow(folks), 100L)
+        expect_equal(ncol(folks), 12)
         expect_equal(names(folks),
                      c("UNITID",
                        "OMRCHRT",
                        "OMACHRT",
-                       "Time to Degree",
-                       "Degree",
-                       "Count",
-                       "Percent",
                        "Entry Status",
                        "Time Status",
                        "Aid Status",
+                       "Time to Degree",
+                       "Degree",
+                       "Enrollment",
+                       "Count",
+                       "Percent",
                        "Fall Year"))
     })
 })
