@@ -7,7 +7,7 @@
 \format{
 \subsection{\code{OMCHRT}}{
 
-An object of class \code{spe_tbl_df} (inhertis from \code{tbl_df}, \code{tbl}, \code{data.frame}), with 15 rows and 4 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}), with 15 rows and 4 columns.
 \describe{
 \item{OMCHRT}{\if{html}{\out{<int>}} Code value for cohort type}
 \item{Entry Status}{\if{html}{\out{<chr>}} All, First-time, or Not-first-time}
