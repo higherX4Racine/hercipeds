@@ -89,3 +89,18 @@
 #' @source <https://nces.ed.gov/ipeds/cipcode/resources.aspx>
 "CIP_PROGRAMS"
 
+#' Mapping details about credentials and success from a complex field in the table of graduation rates.
+#' @format ## `GRTYPE`
+#' An object of class \code{spec_tbl_df} (inherits from \code{tbl_df},
+#' \code{tbl}, \code{data.frame}) with 40 rows and 7 columns.
+#' \describe{
+#'   \item{GRTYPE}{<int> a code that maps to the rest of the columns}
+#'   \item{Definition}{<chr> the definition from the IPEDs dictionary file.}
+#'   \item{Institution Type}{<chr> either "4-year" or "2-year"}
+#'   \item{Subcohort}{<chr> the original degree a person sought: "All," "Bachelor's," "Degree/certificate", or "Other degree/certificate"}
+#'   \item{Outcome}{<chr> An endpoint such as "Completed," "No longer enrolled," or "Transferred out."}
+#'   \item{Credential}{<chr> The kind of degree the person ultimately earned.}
+#'   \item{`Duration Ratio`}{<dbl> The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
+#' }
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"GRTYPE"
