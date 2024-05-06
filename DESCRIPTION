@@ -21,7 +21,9 @@ Depends:
 LazyData: true
 Imports: 
     archive,
+    curl,
     dplyr,
+    httr,
     lubridate,
     purrr,
     readr,
