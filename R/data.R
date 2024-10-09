@@ -16,7 +16,7 @@
 #' Integer codes for different combinations of first-time, full-time, and financial aid statuses
 #' 
 #' @format ## `OMCHRT`
-#' An object of class `spe_tbl_df` (inhertis from `tbl_df`, `tbl`, `data.frame`), with 15 rows and 4 columns.
+#' An object of class `spec_tbl_df` (inherits from `tbl_df`, `tbl`, `data.frame`), with 15 rows and 4 columns.
 #' \describe{
 #' \item{OMCHRT}{<int> Code value for cohort type}
 #' \item{Entry Status}{<chr> All, First-time, or Not-first-time}
@@ -49,41 +49,58 @@
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "CORNELLS"
 
-#' Layout information about the tables that report completion data
+#' Very broad categories of subject areas for post-secondary credentials.
+#' @format ## `CIP_FAMILIES`
 #' 
-#' @format ## `COMPLETERS_SPEC`
+#' An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 50 rows and 3 columns.
 #' 
-#' A list with three elements.
+#' ### Code
 #' 
-#' ### A
+#' A character vector of two-digit numeric codes
 #' 
-#' **Completion by major**
+#' ### Title
 #' 
-#' This is a huge file because of the highly detailed breakdown of majors.
+#' A somewhat short description of the subject area. IN ALL CAPS FOR DRAMA
 #' 
-#' ### B
+#' ### Definition
 #' 
-#' **Completion by Population and Gender**
+#' A somewhat longer description of each subject area. In sentence case.
 #' 
-#' This table reports graduates in combinations of sex and race/ethnicity
-#' 
-#' ### C
-#' 
-#' **Completion by Population**
-#' 
-#' This table reports graduates by single population, like sex, race/ethnicity, or age
-#' 
-#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"COMPLETERS_SPEC"
+#' @source <https://nces.ed.gov/ipeds/cipcode/resources.aspx>
+"CIP_FAMILIES"
 
-#' Layout information about the tables that report institutional characteristics
-#' @format ## `DIRECTORY_SPEC`
-#' In addition to the basic ID and name info, lots of fields about location and programming
-#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"DIRECTORY_SPEC"
+#' Narrow categories of subject areas for post-secondary credentials.
+#' @format ## `CIP_PROGRAMS`
+#' 
+#' An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 473 rows and 3 columns.
+#' 
+#' ### Code
+#' 
+#' A character vector of two-digit numeric codes
+#' 
+#' ### Title
+#' 
+#' A somewhat short description of the subject area. In title case.
+#' 
+#' ### Definition
+#' 
+#' A somewhat longer description of each subject area. In sentence case.
+#' 
+#' @source <https://nces.ed.gov/ipeds/cipcode/resources.aspx>
+"CIP_PROGRAMS"
 
-#' Layout information about the tables that report 4-, 6-, and 8-year completion rates
-#' @format ## `OUTCOMES_SPEC`
-#' Entering class from 8 years in the past, numbers and percentages for a variety of student groups
+#' Mapping details about credentials and success from a complex field in the table of graduation rates.
+#' @format ## `GRTYPE`
+#' An object of class \code{spec_tbl_df} (inherits from \code{tbl_df},
+#' \code{tbl}, \code{data.frame}) with 40 rows and 7 columns.
+#' \describe{
+#'   \item{GRTYPE}{<int> a code that maps to the rest of the columns}
+#'   \item{Institution Level}{<chr> either "4-year" or "2-year"}
+#'   \item{Credential Sought}{<chr> the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
+#'   \item{Credential Earned}{<chr> the actual credential a person earned, with the same options as above}
+#'   \item{Relative Time}{<dbl> The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
+#'   \item{Status}{<chr> The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
+#'   \item{Definition}{<chr> the definition from the IPEDs dictionary file.}
+#' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"OUTCOMES_SPEC"
+"GRTYPE"

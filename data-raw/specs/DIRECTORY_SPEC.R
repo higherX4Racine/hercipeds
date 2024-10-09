@@ -8,6 +8,3 @@ DIRECTORY_SPEC <- "extdata" |>
     readr::read_csv(
         col_types = "c"
     )
-
-usethis::use_data(DIRECTORY_SPEC,
-                  overwrite = TRUE)

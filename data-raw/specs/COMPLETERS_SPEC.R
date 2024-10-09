@@ -21,6 +21,3 @@ COMPLETERS_SPEC <- purrr::imap(
                          ".csv")) |>
         readr::read_csv(col_types = .x)
 )
-
-usethis::use_data(COMPLETERS_SPEC,
-                  overwrite = TRUE)
