@@ -6,12 +6,12 @@ GRTYPE <- "extdata" |>
     readr::read_csv(
         col_types = list(
             GRTYPE = "i",
-            Definition = "c",
-            `Institution Type` = "c",
-            Subcohort = "c",
-            Outcome = "c",
-            Credential = "c",
-            `Duration Ratio` = "n"
+            `Institution Level` = "c",
+            `Credential Sought` = "c",
+            `Credential Earned` = "c",
+            `Relative Time` = "c",
+            Status = "c",
+            Definition = "c"
         )
     )
 

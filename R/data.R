@@ -95,12 +95,12 @@
 #' \code{tbl}, \code{data.frame}) with 40 rows and 7 columns.
 #' \describe{
 #'   \item{GRTYPE}{<int> a code that maps to the rest of the columns}
+#'   \item{Institution Level}{<chr> either "4-year" or "2-year"}
+#'   \item{Credential Sought}{<chr> the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
+#'   \item{Credential Earned}{<chr> the actual credential a person earned, with the same options as above}
+#'   \item{Relative Time}{<dbl> The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
+#'   \item{Status}{<chr> The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
 #'   \item{Definition}{<chr> the definition from the IPEDs dictionary file.}
-#'   \item{Institution Type}{<chr> either "4-year" or "2-year"}
-#'   \item{Subcohort}{<chr> the original degree a person sought: "All," "Bachelor's," "Degree/certificate", or "Other degree/certificate"}
-#'   \item{Outcome}{<chr> An endpoint such as "Completed," "No longer enrolled," or "Transferred out."}
-#'   \item{Credential}{<chr> The kind of degree the person ultimately earned.}
-#'   \item{`Duration Ratio`}{<dbl> The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GRTYPE"

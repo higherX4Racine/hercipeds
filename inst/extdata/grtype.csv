@@ -1,64 +1,47 @@
-GRTYPE,COHORT,SECTION,CHRTSTAT,Definition,Institution Type,Subcohort,Outcome,Credential,Duration Ratio
-1,1,1,10,,,,,,
-2,1,1,12,"4-year institutions, Adjusted cohort (revised cohort minus exclusions)",4-year,All,Adjusted Cohort,0,0
-3,1,1,13,"4-year institutions, Completers within 150% of normal time",4-year,All,Completers,All,1.5
-4,1,1,20,"4-year institutions, Transfer-out students",4-year,All,Transferred out,0,0
-5,1,1,21,"4-year institutions, Transfer-out students",4-year,All,Transferred out,0,0
-6,2,2,10,Bachelor's or equiv subcohort (4-yr institution),4-year,Bachelor's or equivalent ,Cohort,0,0
-7,2,2,11,Bachelor's or equiv subcohort (4-yr institution) exclusions,4-year,Bachelor's or equivalent ,Exclusions,0,0
-8,2,2,12,Bachelor's or equiv subcohort (4-yr institution) adjusted cohort (revised cohort minus exclusions),4-year,Bachelor's or equivalent ,Adjusted Cohort,0,0
-9,2,2,13,Bachelor's or equiv subcohort (4-yr institution) Completers within 150% of normal time total,4-year,Bachelor's or equivalent ,Completers,All,1.5
-10,2,2,14,Bachelor's or equiv subcohort (4-yr institution) Completers of programs of < 2 yrs (150% of normal time),4-year,Bachelor's or equivalent ,Completers,Less than 2 years,1.5
-11,2,2,15,Bachelor's or equiv subcohort (4-yr institution) Completers of programs of 2 but <4 yrs (150% of normal time),4-year,Bachelor's or equivalent ,Completers,Less than 4 years,1.5
-12,2,2,16,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees total (150% of normal time),4-year,Bachelor's or equivalent ,Completers,Bachelor's or equivalent ,1.5
-13,2,2,17,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 4 years or less,4-year,Bachelor's or equivalent ,Completers,Bachelor's or equivalent ,1
-14,2,2,18,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 5 years,4-year,Bachelor's or equivalent ,Completers,Bachelor's or equivalent ,1.25
-15,2,2,19,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 6 years,4-year,Bachelor's or equivalent ,Completers,Bachelor's or equivalent ,1.5
-16,2,2,20,Bachelor's or equiv subcohort (4-yr institution) Transfer-out students,4-year,Bachelor's or equivalent ,Transferred out,0,0
-17,2,2,21,Bachelor's or equiv subcohort (4-yr institution) Transfer-out students,4-year,Bachelor's or equivalent ,Transferred out,0,0
-18,2,3,10,Other degree/certif-seeking subcohort (4-yr institution),4-year,Other degree/certificate ,Cohort,0,0
-18,3,3,10,Other degree/certif-seeking subcohort (4-yr institution),4-year,Other degree/certificate ,Cohort,0,0
-19,3,3,11,Other degree/certificate-seeking subcohort(4-yr institution) exclusions,4-year,Other degree/certificate,Exclusions,0,0
-20,3,3,12,Other degree/certif-seeking subcohort (4-yr institution) Adjusted cohort (revised cohort minus exclusions),4-year,Other degree/certificate ,Adjusted Cohort,0,0
-21,3,3,13,Other degree/certif-seeking subcohort (4-yr institution) Completers within 150% of normal time total,4-year,Other degree/certificate ,Completers,All,1.5
-22,3,3,14,Other degree/certif-seeking subcohort (4-yr institution) Completers of programs < 2 yrs (150% of normal time),4-year,Other degree/certificate ,Completers,Less than 2 years,1.5
-23,3,3,15,Other degree/certif-seeking subcohort (4-yr institution) Completers of programs of 2 but < 4 yrs (150% of normal time),4-year,Other degree/certificate ,Completers,Less than 4 years,1.5
-24,3,3,16,Other degree/certif-seeking subcohort (4-yr institution) Completers of bachelor's or equiv degrees (150% of normal time),4-year,Other degree/certificate ,Completers,Bachelor's or equivalent ,1.5
-25,3,3,20,Other degree/certif-seeking subcohort (4-yr institution) Transfer-out students,4-year,Other degree/certificate ,Transferred out,0,0
-26,3,3,21,Other degree/certif-seeking subcohort (4-yr institution) Transfer-out students,4-year,Other degree/certificate ,Transferred out,0,0
-27,4,4,10,Other degree/certif-seeking subcohort (4-yr institution) Transfer-out students,4-year,Other degree/certificate ,Transferred out,0,0
-28,4,4,11,Degree/certificate-seeking subcohort(2-yr institution) exclusions,2-year,Degree/certificate,Exclusions,0,0
-29,4,4,12,Degree/certif-seeking students ( 2-yr institution) Adjusted cohort (revised cohort minus exclusions),2-year,Degree/certificate ,Adjusted Cohort,0,0
-30,4,4,13,Degree/certif-seeking students ( 2-yr institution) Completers within 150% of normal time total,2-year,Degree/certificate ,Completers,All,1.5
-31,4,4,14,Degree/certif-seeking students ( 2-yr institution) Completers of programs of < 2 yrs (150% of normal time),2-year,Degree/certificate ,Completers,Less than 2 years,1.5
-32,4,4,15,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (150% of normal time),2-year,Degree/certificate ,Completers,Less than 4 years,1.5
-33,4,4,20,Degree/certif-seeking students ( 2-yr institution) Transfer-out students,2-year,Degree/certificate ,Transferred out,0,0
-34,4,4,21,Degree/certif-seeking students ( 2-yr institution) Transfer-out students,2-year,Degree/certificate ,Transferred out,0,0
-35,4,4,22,Degree/certif-seeking students ( 2-yr institution) Completers within 100% of normal time total,2-year,Degree/certificate ,Completers,All,1
-35,5,4,10,Degree/certif-seeking students ( 2-yr institution) Completers within 100% of normal time total,2-year,Degree/certificate ,Completers,All,1
-36,4,4,23,Degree/certif-seeking students ( 2-yr institution) Completers of programs of < 2 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 2 years,1
-36,5,4,11,Degree/certif-seeking students ( 2-yr institution) Completers of programs of < 2 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 2 years,1
-37,4,4,24,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 4 years,1
-37,5,4,12,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 4 years,1
-38,5,4,13,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 4 years,1
-39,5,4,20,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (100% of normal time),2-year,Degree/certificate ,Completers,Less than 4 years,1
-40,1,1,11,Total exclusions 4-year schools,4-year,All,Exclusions,0,0
-41,1,1,31,"4-year institutions, noncompleters still enrolled",4-year,All,Still Enrolled,0,0
-42,1,1,32,"4-year institutions, No longer enrolled",4-year,All,No longer enrolled,0,0
-43,2,2,31,Bachelor's or equiv subcohort (4-yr institution) noncompleters still enrolled,4-year,Bachelor's or equivalent ,Still Enrolled,0,0
-44,2,2,32,"Bachelor's or equiv subcohort (4-yr institution), No longer enrolled",4-year,Bachelor's or equivalent ,No longer enrolled,0,0
-45,3,3,31,Other degree/certif-seeking subcohort (4-yr institution) noncompleters still enrolled,4-year,Other degree/certificate ,Still Enrolled,0,0
-46,3,3,32,Other degree/certif-seeking subcohort (4-yr institution) No longer enrolled,4-year,Other degree/certificate ,No longer enrolled,0,0
-47,4,4,31,Degree/certif-seeking students ( 2-yr institution) noncompleters still enrolled,2-year,Degree/certificate ,Still Enrolled,0,0
-48,4,4,32,Degree/certif-seeking students ( 2-yr institution) No longer enrolled,2-year,Degree/certificate ,No longer enrolled,0,0
-51,3,3,17,,,,,,
-52,3,3,18,,,,,,
-53,3,3,19,,,,,,
-54,5,4,14,,,,,,
-319,3,3,NA,,,,,,
-320,3,3,NA,,,,,,
-321,3,3,NA,,,,,,
-4311,5,4,NA,,,,,,
-4312,5,4,NA,,,,,,
-NA,3,3,NA,,,,,,
-NA,4,4,NA,,,,,,
+﻿GRTYPE,Institution Level,Credential Sought,Credential Earned,Relative Time,Status,Definition
+,4-year,Any,,,Full Cohort,4-year institutions total
+2,4-year,Any,,,Adjusted Cohort,"4-year institutions, Adjusted cohort (revised cohort minus exclusions)"
+3,4-year,Any,Any,<=150%,Completed,"4-year institutions, Completers within 150% of normal time"
+4,4-year,Any,None,,Transferred,"4-year institutions, Transfer-out students"
+5,4-year,Any,None,,Still Enrolled,"4-year institutions, Still enrolled in long programs"
+6,4-year,Bachelor's,,,Full Cohort,Bachelor's or equiv subcohort (4-yr institution)
+7,4-year,Bachelor's,,,Excluded,Bachelor's or equiv subcohort (4-yr institution) exclusions
+8,4-year,Bachelor's,,,Adjusted Cohort,Bachelor's or equiv subcohort (4-yr institution) adjusted cohort (revised cohort minus exclusions)
+9,4-year,Bachelor's,Any,<=150%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers within 150% of normal time total
+10,4-year,Bachelor's,Certificate,<=150%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of programs of < 2 yrs (150% of normal time)
+11,4-year,Bachelor's,Associate's,<=150%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of programs of 2 but <4 yrs (150% of normal time)
+12,4-year,Bachelor's,Bachelor's,<=150%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees total (150% of normal time)
+13,4-year,Bachelor's,Bachelor's,<=100%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 4 years or less
+14,4-year,Bachelor's,Bachelor's,exactly 125%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 5 years
+15,4-year,Bachelor's,Bachelor's,exactly 150%,Completed,Bachelor's or equiv subcohort (4-yr institution) Completers of bachelor's or equiv degrees in 6 years
+16,4-year,Bachelor's,None,,Transferred,Bachelor's or equiv subcohort (4-yr institution) Transfer-out students
+17,4-year,Bachelor's,None,,Still Enrolled,Bachelor's or equiv subcohort (4-yr institution) Still enrolled in long programs
+18,4-year,Certificate,,,Full Cohort,Other degree/certif-seeking subcohort (4-yr institution)
+19,4-year,Certificate,,,Excluded,Other degree/certificate-seeking subcohort(4-yr institution) exclusions
+20,4-year,Certificate,,,Adjusted Cohort,Other degree/certif-seeking subcohort (4-yr institution) Adjusted cohort (revised cohort minus exclusions)
+21,4-year,Certificate,Any,<=150%,Completed,Other degree/certif-seeking subcohort (4-yr institution) Completers within 150% of normal time total
+22,4-year,Certificate,Certificate,<=150%,Completed,Other degree/certif-seeking subcohort (4-yr institution) Completers of programs < 2 yrs (150% of normal time)
+23,4-year,Certificate,Associate's,<=150%,Completed,Other degree/certif-seeking subcohort (4-yr institution) Completers of programs of 2 but < 4 yrs (150% of normal time)
+24,4-year,Certificate,Bachelor's,<=150%,Completed,Other degree/certif-seeking subcohort (4-yr institution) Completers of bachelor's or equiv degrees (150% of normal time)
+25,4-year,Certificate,None,,Transferred,Other degree/certif-seeking subcohort (4-yr institution) Transfer-out students
+26,4-year,Certificate,None,,Still Enrolled,Other degree/certif-seeking subcohort (4-yr institution) Still enrolled in long programs
+27,2-year,Associate's,,,Full Cohort,Degree/certif-seeking students ( 2-yr institution)
+28,2-year,Associate's,,,Excluded,Degree/certificate-seeking subcohort(2-yr institution) exclusions
+29,2-year,Associate's,,,Adjusted Cohort,Degree/certif-seeking students ( 2-yr institution) Adjusted cohort (revised cohort minus exclusions)
+30,2-year,Associate's,Any,<=150%,Completed,Degree/certif-seeking students ( 2-yr institution) Completers within 150% of normal time total
+31,2-year,Associate's,Certificate,<=150%,Completed,Degree/certif-seeking students ( 2-yr institution) Completers of programs of < 2 yrs (150% of normal time)
+32,2-year,Associate's,Associate's,<=150%,Completed,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (150% of normal time)
+33,2-year,Associate's,None,,Transferred,Degree/certif-seeking students ( 2-yr institution) Transfer-out students
+34,2-year,Associate's,None,,Still Enrolled,Degree/certif-seeking students ( 2-yr institution) Still enrolled in long programs
+35,2-year,Associate's,Any,<=100%,Completed,Degree/certif-seeking students ( 2-yr institution) Completers within 100% of normal time total
+36,2-year,Associate's,Certificate,<=100%,Completed,Degree/certif-seeking students ( 2-yr institution) Completers of programs of < 2 yrs (100% of normal time)
+37,2-year,Associate's,Associate's,<=100%,Completed,Degree/certificate-seeking students ( 2-yr institution) Completers of programs of 2 but < 4 yrs (100% of normal time)
+40,4-year,Any,,,Excluded,Total exclusions 4-year schools
+41,4-year,Any,None,,Still Enrolled,"4-year institutions, noncompleters still enrolled"
+42,4-year,Any,None,,No Longer Enrolled,"4-year institutions, No longer enrolled"
+43,4-year,Bachelor's,None,,Still Enrolled,Bachelor's or equiv subcohort (4-yr institution) noncompleters still enrolled
+44,4-year,Bachelor's,None,,No Longer Enrolled,"Bachelor's or equiv subcohort (4-yr institution), No longer enrolled"
+45,4-year,Certificate,None,,Still Enrolled,Other degree/certif-seeking subcohort (4-yr institution) noncompleters still enrolled
+46,4-year,Certificate,None,,No Longer Enrolled,Other degree/certif-seeking subcohort (4-yr institution) No longer enrolled
+47,2-year,Associate's,None,,Still Enrolled,Degree/certif-seeking students ( 2-yr institution) noncompleters still enrolled
+48,2-year,Associate's,None,,No Longer Enrolled,Degree/certif-seeking students ( 2-yr institution) No longer enrolled
