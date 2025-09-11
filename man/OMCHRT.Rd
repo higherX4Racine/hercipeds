@@ -7,12 +7,14 @@
 \format{
 \subsection{\code{OMCHRT}}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}), with 15 rows and 4 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 15 rows and 4 columns.
 \describe{
-\item{OMCHRT}{\if{html}{\out{<int>}} Code value for cohort type}
-\item{Entry Status}{\if{html}{\out{<chr>}} All, First-time, or Not-first-time}
-\item{Time Status}{\if{html}{\out{<chr>}} All, Full-time, or Part-time}
-\item{Aid Status}{\if{html}{\out{<chr>}} All, Pell recipient, or not Pell recipient}
+\item{OMCHRT}{\emph{<int>} Code value for cohort type}
+\item{Entry Status}{\emph{<chr>} All, First-time, or Not-first-time}
+\item{Time Status}{\emph{<chr>} All, Full-time, or Part-time}
+\item{Aid Status}{\emph{<chr>} All, Pell recipient, or not Pell recipient}
 }
 }
 }

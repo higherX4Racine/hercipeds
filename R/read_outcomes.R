@@ -2,22 +2,11 @@
 
 #' Load IPEDS data about 4-, 6-, and 8-year completion rates.
 #'
-#' @param .year <int> the academic year that the information describes
-#' @param .path <chr> the full path to the zip archive that contains the file.
+#' @param .year *&lt;int&gt;* the academic year that the information describes
+#' @param .path *&lt;chr&gt;* the full path to the zip archive that contains the file.
 #'
 #' @return a tibble of many columns
-#' @importFrom archive archive_read
-#' @importFrom readr read_csv
-#' @importFrom dplyr mutate
-#' @importFrom dplyr row_number
-#' @importFrom purrr map
-#' @importFrom dplyr select
-#' @importFrom tidyselect all_of
-#' @importFrom utils tail
-#' @importFrom purrr imap
-#' @importFrom tidyr pivot_longer
-#' @importFrom purrr pluck
-#' @importFrom dplyr inner_join
+#' @seealso [archive::archive_read()]
 #' @export
 read_outcomes <- function(.year, .path){
     .initial <- .path |>
@@ -84,6 +73,7 @@ read_outcomes <- function(.year, .path){
 #' @importFrom dplyr inner_join
 #' @importFrom dplyr select
 #' @importFrom tidyselect any_of
+#' @keywords internal
 .join_and_drop_keys <- function(.lhs, .rhs, .keys){
     .lhs |>
         dplyr::inner_join(.rhs, by = .keys) |>

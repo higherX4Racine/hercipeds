@@ -7,19 +7,19 @@
 read_completers(.year, .path = ".", .aggregation = "C")
 }
 \arguments{
-\item{.year}{\if{html}{\out{<int>}} - the academic year the data correspond to}
+\item{.year}{\emph{<int>} the academic year the data correspond to}
 
-\item{.path}{\if{html}{\out{<chr>}}, optional - the location of the zipped file, defaults to "."}
+\item{.path}{\emph{<chr?>} the location of the zipped file, defaults to "."}
 
-\item{.aggregation}{\if{html}{\out{<chr>}}, optional - "A", "B", or "C" (the default), see Notes}
+\item{.aggregation}{\emph{<chr?>} "A", "B", or "C" (the default), see Notes}
 }
 \value{
 a data frame with approximately 5 columns:
 \describe{
-\item{UNITID}{\if{html}{\out{<int>}} The unique identifier of a single higher education institution}
-\item{Population}{\if{html}{\out{<chr>}} A demographic group like "US Residents", "Asian", or "18-24"}
-\item{Gender}{\if{html}{\out{<chr>}} Usually "Female" or "Male", but possibly "Another" or "Unknown"}
-\item{Completers}{\if{html}{\out{<int>}} The number of people in this population-gender combination}
+\item{UNITID}{\emph{<int>} The unique identifier of a single higher education institution}
+\item{Population}{\emph{<chr>} A demographic group like "US Residents", "Asian", or "18-24"}
+\item{Gender}{\emph{<chr>} Usually "Female" or "Male", but possibly "Another" or "Unknown"}
+\item{Completers}{\emph{<int>} The number of people in this population-gender combination}
 }
 }
 \description{

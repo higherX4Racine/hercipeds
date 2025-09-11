@@ -7,16 +7,17 @@
 \format{
 \subsection{\code{GRTYPE}}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df},
-\code{tbl}, \code{data.frame}) with 40 rows and 7 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 40 rows and 7 columns.
 \describe{
-\item{GRTYPE}{\if{html}{\out{<int>}} a code that maps to the rest of the columns}
-\item{Institution Level}{\if{html}{\out{<chr>}} either "4-year" or "2-year"}
-\item{Credential Sought}{\if{html}{\out{<chr>}} the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
-\item{Credential Earned}{\if{html}{\out{<chr>}} the actual credential a person earned, with the same options as above}
-\item{Relative Time}{\if{html}{\out{<dbl>}} The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
-\item{Status}{\if{html}{\out{<chr>}} The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
-\item{Definition}{\if{html}{\out{<chr>}} the definition from the IPEDs dictionary file.}
+\item{GRTYPE}{\emph{<int>} a code that maps to the rest of the columns}
+\item{Institution Level}{\emph{<chr>} either "4-year" or "2-year"}
+\item{Credential Sought}{\emph{<chr>} the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
+\item{Credential Earned}{\emph{<chr>} the actual credential a person earned, with the same options as above}
+\item{Relative Time}{\emph{<dbl>} The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
+\item{Status}{\emph{<chr>} The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
+\item{Definition}{\emph{<chr>} the definition from the IPEDs dictionary file.}
 }
 }
 }

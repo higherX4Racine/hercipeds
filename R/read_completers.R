@@ -29,16 +29,16 @@
 #' * certificates of less than 12 weeks
 #' * certificates of at least 12-weeks but less-than 1-year.
 #' 
-#' @param .year <int> - the academic year the data correspond to
-#' @param .path <chr>, optional - the location of the zipped file, defaults to "."
-#' @param .aggregation <chr>, optional - "A", "B", or "C" (the default), see Notes
+#' @param .year *&lt;int&gt;* the academic year the data correspond to
+#' @param .path *&lt;chr?&gt;* the location of the zipped file, defaults to "."
+#' @param .aggregation *&lt;chr?&gt;* "A", "B", or "C" (the default), see Notes
 #'
 #' @return a data frame with approximately 5 columns:
 #' \describe{
-#'  \item{UNITID}{<int> The unique identifier of a single higher education institution}
-#'  \item{Population}{<chr> A demographic group like "US Residents", "Asian", or "18-24"}
-#'  \item{Gender}{<chr> Usually "Female" or "Male", but possibly "Another" or "Unknown"}
-#'  \item{Completers}{<int> The number of people in this population-gender combination}
+#'  \item{UNITID}{*&lt;int&gt;* The unique identifier of a single higher education institution}
+#'  \item{Population}{*&lt;chr&gt;* A demographic group like "US Residents", "Asian", or "18-24"}
+#'  \item{Gender}{*&lt;chr&gt;* Usually "Female" or "Male", but possibly "Another" or "Unknown"}
+#'  \item{Completers}{*&lt;int&gt;* The number of people in this population-gender combination}
 #' }
 #' @export
 read_completers <- function(.year, .path = ".", .aggregation = "C"){

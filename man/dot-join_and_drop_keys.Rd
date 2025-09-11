@@ -19,3 +19,4 @@ a new table
 \description{
 A common task is to connect to tables by a common foreign key, then drop the key
 }
+\keyword{internal}

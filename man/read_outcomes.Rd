@@ -7,13 +7,16 @@
 read_outcomes(.year, .path)
 }
 \arguments{
-\item{.year}{\if{html}{\out{<int>}} the academic year that the information describes}
+\item{.year}{\emph{<int>} the academic year that the information describes}
 
-\item{.path}{\if{html}{\out{<chr>}} the full path to the zip archive that contains the file.}
+\item{.path}{\emph{<chr>} the full path to the zip archive that contains the file.}
 }
 \value{
 a tibble of many columns
 }
 \description{
 Load IPEDS data about 4-, 6-, and 8-year completion rates.
+}
+\seealso{
+\code{\link[archive:archive_read]{archive::archive_read()}}
 }

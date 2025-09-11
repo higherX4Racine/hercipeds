@@ -7,10 +7,12 @@
 \format{
 \subsection{\code{AWLEVEL}}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16 rows and 2 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 16 rows and 2 columns.
 \describe{
-\item{AWLEVEL}{\if{html}{\out{<int>}} Code value for a degree type}
-\item{Award Level}{\if{html}{\out{<chr>}} Human-readable name for a degree type}
+\item{AWLEVEL}{\emph{<int>} Code value for a degree type}
+\item{Award Level}{\emph{<chr>} Human-readable name for a degree type}
 }
 }
 }

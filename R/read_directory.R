@@ -1,14 +1,10 @@
 #' Identity and overall characteristics of institutions of higher education
 #'
-#' @param .year <int> the academic year that the information describes
-#' @param .path <chr> the full path to the zip archive that contains the file.
+#' @param .year *&lt;int&gt;* the academic year that the information describes
+#' @param .path *&lt;chr&gt;* the full path to the zip archive that contains the file.
 #'
 #' @return a tibble of many columns
-#' @importFrom archive archive_read
-#' @importFrom readr read_csv
-#' @importFrom rlang set_names
-#' @importFrom dplyr mutate
-#' @importFrom lubridate mdy
+#' @seealso [archive::archive_read()]
 #' @export
 read_directory <- function(.year, .path){
     .path |>

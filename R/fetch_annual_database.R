@@ -2,25 +2,18 @@
 
 #' Download an Access-formatted database of IPEDs data for one year
 #'
-#' @param .year <int> the starting year the data describe. Usually July-June. 
-#' @param .folder_path <str> the location to save the downloaded files to.
+#' @param .year *&lt;int&gt;* the starting year the data describe. Usually July-June. 
+#' @param .folder_path *&lt;chr&gt;* the location to save the downloaded files to.
 #'
-#' @return <null> no return value
-#' @importFrom purrr keep
-#' @importFrom utils head
-#' @importFrom purrr walk
-#' @importFrom curl curl_download
-#' @importFrom purrr map
-#' @importFrom purrr map_chr
-#' @importFrom purrr map_int
-#' @importFrom httr HEAD
-#' @importFrom httr status_code
+#' @seealso [curl::curl_download()]
+#' @seealso [httr::HEAD()]
+#' @seealso [httr::status_code()]
 #' 
 #' @export
 fetch_annual_database <- function(.year, .folder_path) {
     version <- .year |>
         get_annual_status() |>
-        purrr::keep( ~ . == 200L) |>
+        purrr::keep(\(.) . == 200L) |>
         utils::head(1) |>
         names()
     
@@ -34,9 +27,9 @@ fetch_annual_database <- function(.year, .folder_path) {
             make_dict_url(.year)
         ) |>
         purrr::walk(
-            ~ curl::curl_download(url = .,
-                                  destfile = file.path(.folder_path,
-                                                       basename(.)))
+            \(.) curl::curl_download(url = .,
+                                     destfile = file.path(.folder_path,
+                                                          basename(.)))
         )
 }
 

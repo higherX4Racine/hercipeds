@@ -10,19 +10,25 @@
 A list with two elements.
 \subsection{Directory}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 3 rows and 73 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 3 rows and 73 columns.
 Detailed characteristics of each institution in 2022.
 }
 
 \subsection{Completers}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 36 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 7 rows and 36 columns.
 Graduates in 2022 by population from each institution.
 }
 
 \subsection{Outcomes}{
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 20 rows and 54 columns.
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 20 rows and 54 columns.
 Overall 4-, 6-, and 8-year completion from each institution
 }
 

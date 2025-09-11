@@ -7,12 +7,12 @@
 wrangle_completers(.conn, .spec)
 }
 \arguments{
-\item{.conn}{\if{html}{\out{<chr>}} a suitable input to \code{\link[readr:read_delim]{readr::read_csv()}}, as from \code{\link[=unzip_completers]{unzip_completers()}}}
+\item{.conn}{\emph{<chr>} a suitable input to \code{\link[readr:read_delim]{readr::read_csv()}}, as from \code{\link[=unzip_completers]{unzip_completers()}}}
 
-\item{.spec}{\if{html}{\out{<tibble>}} one of the elements of \code{COMPLETERS_SPEC}}
+\item{.spec}{\emph{<tbl>} one of the elements of \code{COMPLETERS_SPEC}}
 }
 \value{
-a tibble of college completion data, aggregated according to \code{.spec}
+\emph{<tbl>} college completion data, aggregated according to \code{.spec}
 }
 \description{
 Render IPEDS college completion data into a long, tidy tibble.
