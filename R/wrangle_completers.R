@@ -1,22 +1,11 @@
 #' Render IPEDS college completion data into a long, tidy tibble. 
 #'
-#' @param .conn <chr> a suitable input to [readr::read_csv()], as from [unzip_completers()]
-#' @param .spec <tibble> one of the elements of `COMPLETERS_SPEC`
+#' @param .conn *&lt;chr&gt;* a suitable input to [readr::read_csv()], as from [unzip_completers()]
+#' @param .spec *&lt;tbl&gt;* one of the elements of `COMPLETERS_SPEC`
 #'
-#' @return a tibble of college completion data, aggregated according to `.spec`
+#' @return *&lt;tbl&gt;* college completion data, aggregated according to `.spec`
 #' @seealso [unzip_completers()]
 #' @seealso [read_completers()]
-#' @importFrom readr read_csv
-#' @importFrom rlang set_names
-#' @importFrom tidyr pivot_longer
-#' @importFrom dplyr filter
-#' @importFrom dplyr pull
-#' @importFrom tidyselect all_of
-#' @importFrom dplyr inner_join
-#' @importFrom dplyr select
-#' @importFrom tidyselect any_of
-#' @importFrom dplyr rename_with
-#' @importFrom tidyselect starts_with
 wrangle_completers <- function(.conn, .spec){
     .result <- .conn |>
         readr::read_csv(

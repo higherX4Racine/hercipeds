@@ -1,0 +1,45 @@
+url: https://higherx4racine.github.io/hercipeds/
+template:
+  bootstrap: 5
+
+repo:
+  url:
+    home: https://github.com/higherX4Racine/hercipeds
+
+destination: pkgdown/docs/
+
+reference:
+- subtitle: Integrated Postsecondary Education Data System
+  desc: >
+    utilties for any kinds of [IPEDS](https://nces.ed.gov/ipeds) data
+  contents:
+  - fetch_annual_database
+  - read_directory
+  
+- subtitle: Postsecondary completion
+  desc: >
+    gather and summarize information about who has earned credentials
+  contents:
+  - read_completers
+  - read_graduation_rates
+  - read_outcomes
+  - unzip_completers
+  - wrangle_completers
+  - AWLEVEL
+  - GR_VARIABLES
+  - GRTYPE
+  - OMCHRT
+
+- subtitle: Subject areas
+  desc: >
+    Information about who studied different subjects.
+  contents:
+  - read_cip_codes
+  - CIP_FAMILIES
+  - CIP_PROGRAMS
+  
+- subtitle: Example datasets
+  desc: >
+    subsets of a full IPEDS data download
+  contents:
+  - CORNELLS

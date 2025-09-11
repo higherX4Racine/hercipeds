@@ -7,16 +7,16 @@
 read_cip_codes(.path)
 }
 \arguments{
-\item{.path}{\if{html}{\out{<chr>}} the full path to a file downloaded from NCES.}
+\item{.path}{\emph{<chr>} the full path to a file downloaded from NCES.}
 }
 \value{
 a \code{\link[tibble:tibble]{tibble::tibble()}} with five variables
 \describe{
-\item{Family}{\if{html}{\out{<chr>}} a two-digit code for the broadest categories of programs}
-\item{Code}{\if{html}{\out{<chr>}} a 2-, 4-, or 6-digit code in ##[.####] format, family first.}
-\item{Title}{\if{html}{\out{<chr>}} a short-ish label for the group or program}
-\item{Definition}{\if{html}{\out{<chr>}} a longer description of the group or program}
-\item{Type}{\if{html}{\out{<chr>}} whether the code has 2, 4, or 6 digits}
+\item{Family}{\emph{<chr>} a two-digit code for the broadest categories of programs}
+\item{Code}{\emph{<chr>} a 2-, 4-, or 6-digit code in ##[.####] format, family first.}
+\item{Title}{\emph{<chr>} a short-ish label for the group or program}
+\item{Definition}{\emph{<chr>} a longer description of the group or program}
+\item{Type}{\emph{<chr>} whether the code has 2, 4, or 6 digits}
 }
 }
 \description{

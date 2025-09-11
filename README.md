@@ -4,8 +4,10 @@
 # hercipeds
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of hercipeds is to use data from
-[IPEDS](https://nces.ed.gov/ipeds) to report about institutions of
-higher education.
+IPEDS contains data in many different tables. The format is
+well-defined, but not particularly tidy. This package wrangles the data
+into tidy format and translates the machine-readable field names with
+their human-readable equivalents.

@@ -5,13 +5,13 @@
 #' machine in an unzipped format when this function can unzip a file as it reads
 #' its contents into memory.
 #' 
-#' @param .year <int> the academic year that the completion data come from
-#' @param .aggregation <chr> one of "A", "B", or "C"
-#' @param .path <chr> the full path to the zip file
+#' @param .year *&lt;int&gt;* the academic year that the completion data come from
+#' @param .aggregation *&lt;chr&gt;* one of "A", "B", or "C"
+#' @param .path *&lt;chr&gt;* the full path to the zip file
 #'
 #' @return a file-like connection to the csv in the zipped archive
 #' @seealso [wrangle_completers()]
-#' @importFrom archive archive_read
+#' @seealso [archive::archive_read()]
 unzip_completers <- function(.year, .aggregation, .path){
     .agg <- toupper(.aggregation)
     .path |>

@@ -7,11 +7,11 @@
 unzip_completers(.year, .aggregation, .path)
 }
 \arguments{
-\item{.year}{\if{html}{\out{<int>}} the academic year that the completion data come from}
+\item{.year}{\emph{<int>} the academic year that the completion data come from}
 
-\item{.aggregation}{\if{html}{\out{<chr>}} one of "A", "B", or "C"}
+\item{.aggregation}{\emph{<chr>} one of "A", "B", or "C"}
 
-\item{.path}{\if{html}{\out{<chr>}} the full path to the zip file}
+\item{.path}{\emph{<chr>} the full path to the zip file}
 }
 \value{
 a file-like connection to the csv in the zipped archive
@@ -24,4 +24,6 @@ its contents into memory.
 }
 \seealso{
 \code{\link[=wrangle_completers]{wrangle_completers()}}
+
+\code{\link[archive:archive_read]{archive::archive_read()}}
 }
