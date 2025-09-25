@@ -11,8 +11,8 @@ An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
 with 16 rows and 2 columns.
 \describe{
-\item{AWLEVEL}{\emph{<int>} Code value for a degree type}
-\item{Award Level}{\emph{<chr>} Human-readable name for a degree type}
+\item{AWLEVEL}{\code{int} Code value for a degree type}
+\item{Award Level}{\code{chr} Human-readable name for a degree type}
 }
 }
 }
