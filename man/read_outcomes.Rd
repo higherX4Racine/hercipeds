@@ -7,9 +7,9 @@
 read_outcomes(.year, .path)
 }
 \arguments{
-\item{.year}{\emph{<int>} the academic year that the information describes}
+\item{.year}{\verb{<int>} the academic year that the information describes}
 
-\item{.path}{\emph{<chr>} the full path to the zip archive that contains the file.}
+\item{.path}{\verb{<chr>} the full path to the zip archive that contains the file.}
 }
 \value{
 a tibble of many columns

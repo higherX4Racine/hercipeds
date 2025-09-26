@@ -2,8 +2,8 @@
 
 #' Load IPEDS data about graduation rates.
 #'
-#' @param .year *&lt;int&gt;* the academic year that the information describes
-#' @param .path *&lt;chr&gt;* the full path to the zip archive that contains the file.
+#' @param .year `<int>` the academic year that the information describes
+#' @param .path `<chr>` the full path to the zip archive that contains the file.
 #'
 #' @return a tibble of many columns
 #' @export

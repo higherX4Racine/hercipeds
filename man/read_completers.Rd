@@ -4,29 +4,57 @@
 \alias{read_completers}
 \title{Read data about college completers from one zipped file}
 \usage{
-read_completers(.year, .path = ".", .aggregation = "C")
+read_completers(.path, .spec)
 }
 \arguments{
-\item{.year}{\emph{<int>} the academic year the data correspond to}
+\item{.path}{\verb{<chr>} the full path to a csv file with completer data.}
 
-\item{.path}{\emph{<chr?>} the location of the zipped file, defaults to "."}
-
-\item{.aggregation}{\emph{<chr?>} "A", "B", or "C" (the default), see Notes}
+\item{.spec}{\verb{<tbl>} either "A," "B," or "C."}
 }
 \value{
-a data frame with approximately 5 columns:
-\describe{
-\item{UNITID}{\emph{<int>} The unique identifier of a single higher education institution}
-\item{Population}{\emph{<chr>} A demographic group like "US Residents", "Asian", or "18-24"}
-\item{Gender}{\emph{<chr>} Usually "Female" or "Male", but possibly "Another" or "Unknown"}
-\item{Completers}{\emph{<int>} The number of people in this population-gender combination}
-}
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}).
+The exact nature of the value depends upon \code{.spec}.
+See Details
 }
 \description{
 Each file contains the number of students receiving a degree or certificate.
 Data cover awards granted between July 1, \code{.year - 1} and June 30, \code{.year}.
 }
 \details{
+There are three possible aggregations of completer data.
+The type of aggregation determines the specific layout of the return value.
+\subsection{Aggregation A}{
+
+This aggregation reports about graduates by field of study, primary major,
+gender, race/ethnicity, immigration status, and type of degree.
+Choosing this aggregation results in a return value with 7 columns.
+
+\describe{
+\item{UNITID      }{ \verb{<int>} the seven-digit code for an institution}
+\item{CIPCODE     }{ \verb{<chr>} a 2-, 4-, or 6-digit code for a field of study}
+\item{MAJORNUM    }{ \verb{<int>} whether this was a first or second major}
+\item{Completers  }{ \verb{<int>} the number of degrees awarded in a calendar year}
+\item{Population  }{ \verb{<chr>} the race/ethnicity or other demographic category of people counted by this row}
+\item{Gender      }{ \verb{<chr>} all, female, or male}
+\item{Award Level }{ \verb{<chr>} Associate's, Bachelor's, Certificate, etc.}
+}
+}
+
+\subsection{Aggregation B}{
+
+This aggregation reports about graduates by gender, race/ethnicity, and
+immigration status.
+Choosing this aggregation results in a return value with 4 columns.
+
+\describe{
+\item{UNITID     }{\verb{<int>} the seven-digit code for an institution}
+\item{Completers }{\verb{<int>} the number of degrees awarded in a calendar year}
+\item{Population }{\verb{<chr>} the race/ethnicity or other demographic category of people counted by this row}
+\item{Gender     }{\verb{<chr>} all, female, or male}
+}
+}
+
 \subsection{Aggregation C}{
 
 This version of the table enumerates students by level of award and by
@@ -34,23 +62,21 @@ race/ethnicity, gender and age categories. Each file contains multiple
 records per institution. Each record is uniquely defined by the variables
 IPEDS ID (UNITID) and award level (AWLEVELC ). The 'C' is stripped from
 "AWLEVELC" during post-read processing. Each record will contain:
-\itemize{
-\item the total number of students receiving awards
-\item number of  men and women receiving awards
-\item number of students receiving awards for all nine race/ethnicity
-categories;
-\item number of students receiving awards are also available for the following
-age groups:
-\itemize{
-\item under 18
-\item 18-24
-\item 25-39
-\item 40 and above.
-}
+
+Choosing this aggregation results in a return value with 7 columns.
+
+\describe{
+\item{UNITID      }{\verb{<int>} the seven-digit code for an institution}
+\item{Completers  }{\verb{<int>} the number of degrees awarded in a calendar year}
+\item{Population  }{\verb{<chr>} the race/ethnicity or other demographic category of people counted by this row}
+\item{Gender      }{\verb{<chr>} all, female, or male}
+\item{Lower Age   }{\verb{<int>} the lowest age in the age bracket described by this row}
+\item{Upper Age   }{\verb{<int>} the highest age in the age bracket described by this row}
+\item{Award Level }{\verb{<chr>} Associate's, Bachelor's, Certificate, etc.}
 }
 
 Numbers are not available for combinations of race, gender and age.
-Beginning with 2019-20, the certificate of less than 1 year was replaced by
+Beginning with 2019-20, "certificate of less than 1 year" was replaced by
 the following 2 categories:
 \itemize{
 \item certificates of less than 12 weeks

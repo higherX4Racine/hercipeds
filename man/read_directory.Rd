@@ -7,9 +7,9 @@
 read_directory(.year, .path)
 }
 \arguments{
-\item{.year}{\emph{<int>} the academic year that the information describes}
+\item{.year}{\verb{<int>} the academic year that the information describes}
 
-\item{.path}{\emph{<chr>} the full path to the zip archive that contains the file.}
+\item{.path}{\verb{<chr>} the full path to the zip archive that contains the file.}
 }
 \value{
 a tibble of many columns
@@ -18,5 +18,5 @@ a tibble of many columns
 Identity and overall characteristics of institutions of higher education
 }
 \seealso{
-\code{\link[archive:archive_read]{archive::archive_read()}}
+\code{\link[readr:read_delim]{readr::read_csv()}}
 }

@@ -6,15 +6,15 @@
 #' education programs/majors/degrees/etc. It is maintained by the
 #' [National Center for Education Statistics](https://nces.ed.gov/ipeds/cipcode/default.aspx)
 #'
-#' @param .path *&lt;chr&gt;* the full path to a file downloaded from NCES.
+#' @param .path `<chr>` the full path to a file downloaded from NCES.
 #'
 #' @return a [`tibble::tibble()`] with five variables
 #' \describe{
-#'   \item{Family}{*&lt;chr&gt;* a two-digit code for the broadest categories of programs}
-#'   \item{Code}{*&lt;chr&gt;* a 2-, 4-, or 6-digit code in ##\[.####\] format, family first.}
-#'   \item{Title}{*&lt;chr&gt;* a short-ish label for the group or program}
-#'   \item{Definition}{*&lt;chr&gt;* a longer description of the group or program}
-#'   \item{Type}{*&lt;chr&gt;* whether the code has 2, 4, or 6 digits}
+#'   \item{Family}{`<chr>` a two-digit code for the broadest categories of programs}
+#'   \item{Code}{`<chr>` a 2-, 4-, or 6-digit code in ##\[.####\] format, family first.}
+#'   \item{Title}{`<chr>` a short-ish label for the group or program}
+#'   \item{Definition}{`<chr>` a longer description of the group or program}
+#'   \item{Type}{`<chr>` whether the code has 2, 4, or 6 digits}
 #' }
 #' @export
 read_cip_codes <- function(.path){

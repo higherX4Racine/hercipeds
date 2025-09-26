@@ -7,9 +7,9 @@
 fetch_annual_database(.year, .folder_path)
 }
 \arguments{
-\item{.year}{\emph{<int>} the starting year the data describe. Usually July-June.}
+\item{.year}{\verb{<int>} the starting year the data describe. Usually July-June.}
 
-\item{.folder_path}{\emph{<chr>} the location to save the downloaded files to.}
+\item{.folder_path}{\verb{<chr>} the location to save the downloaded files to.}
 }
 \description{
 Download an Access-formatted database of IPEDs data for one year
