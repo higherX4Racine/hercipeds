@@ -17,7 +17,6 @@
 #' information such as race/ethnicity, immigration status, and gender.
 #' When you call this function with the "demographic" table option, the output
 #' is a data frame with 15 columns.
-#' tibble [1,672,260 × 15] (S3: tbl_df/tbl/data.frame)
 #' \describe{
 #'   \item{UNITID            }{`<int>` a seven digit unique identifier for a school}
 #'   \item{Index             }{`<int>` the }
@@ -54,56 +53,30 @@
 #'   \item{All Degrees        }{`<int>` the total number of undegraduate degrees earned}
 #' }
 #' 
-#' @param .file `<chr>` the full path to the  file.
+#' @param .dem_file `<chr>` the full path to the file with graduation and demographic information.
+#' @param .aid_file `<chr>` the full path to the file with graduation and financial aid information.
 #'
 #' @returns #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`). See Details.
 #' 
+#' @seealso [read_graduates_and_demographics()]
+#' @seealso [read_graduates_and_assistance()]
 #' @export
-read_graduation_rates <- function(.file){
-    .initial <- .file |>
-        readr::read_csv(
-            col_types = c(.default = "c") # because column names might not be CAPS
-        ) |>
-        dplyr::rename_with(
-            stringr::str_to_upper
-        ) |>
-        dplyr::select(
-            !tidyselect::starts_with("X")
-        ) |>
-        dplyr::select(
-            !tidyselect::any_of(c(
-                "CHRTSTAT",
-                "SECTION",
-                "COHORT", # redundant with "Credential Sought"
-                "LINE"
-            ))
-        ) |>
-        dplyr::mutate(
-            dplyr::across(c("UNITID",
-                            tidyselect::starts_with("GR")),
-                          as.integer)
-        ) |>
-        tidyr::pivot_longer(
-            cols = !tidyselect::any_of(c(
-                "UNITID",
-                "GRTYPE"
-            )),
-            names_to = "varName",
-            values_to = "Count"
-        ) |>
-        unpack_variable(
-            hercipeds::GRTYPE,
-            "GRTYPE",
-            "Institution Level",
-            "Credential Sought",
-            "Credential Earned",
-            "Status"
-        ) |>
-        unpack_variable(
-            GR_VARIABLES,
-            "varName",
-            "Race/Ethnicity",
-            "Sex"
-        )
+read_graduates <- function(.dem_file, .aid_file){
+    
+    dplyr::bind_rows(
+        .dem_file |>
+            read_graduates_and_demographics() |>
+            dplyr::rename(
+                Population = "Race/Ethnicity"
+            ),
+        .aid_file |>
+            read_graduates_and_assistance() |>
+            dplyr::rename(
+                Population = "Assistance"
+            ) |>
+            dplyr::mutate(
+                Sex = "all"
+            )
+    )
 }

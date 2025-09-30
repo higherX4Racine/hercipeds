@@ -28,7 +28,7 @@ unpack_variable <- function(.table_with_variable,
     }
     
     .table_with_variable |>
-        dplyr::left_join(
+        dplyr::inner_join(
             dplyr::select(
                 .variable_definitions,
                 tidyselect::all_of(c(.variable_name,

@@ -32,10 +32,10 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 15 rows and 4 columns.
 #' \describe{
-#' \item{OMCHRT}{`int` Code value for cohort type}
-#' \item{Entry Status}{`chr` All, First-time, or Not-first-time}
-#' \item{Time Status}{`chr` All, Full-time, or Part-time}
-#' \item{Aid Status}{`chr` All, Pell recipient, or not Pell recipient}
+#' \item{OMCHRT}{`<int>` Code value for cohort type}
+#' \item{Entry Status}{`<chr>` All, First-time, or Not-first-time}
+#' \item{Time Status}{`<chr>` All, Full-time, or Part-time}
+#' \item{Aid Status}{`<chr>` All, Pell recipient, or not Pell recipient}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "OMCHRT"
@@ -115,7 +115,7 @@
 
 #' Mapping details about credentials and success from a complex field in the table of graduation rates.
 #' @format ## `GLOSSARIES_FOR_GR_TYPES`
-#' A list of two data frames.
+#' A list of three data frames.
 #'
 #' ### Cohort
 #' 
@@ -124,13 +124,13 @@
 #' with 28 rows and 4 columns.
 #' 
 #' \describe{
-#'   \item{GR_TYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{GRTYPE}{`<int>` a code that maps to the rest of the columns}
 #'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
 #'   \item{Award Sought}{`<fct>`
 #'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
 #'   Values include "Certificate," "Associate's," "Bachelor's," or "Any." }
 #'   \item{Statistic}{`<fct>`
-#'    The quantity reported in rows with this GR_TYPE code.
+#'    The quantity reported in rows with this GRTYPE code.
 #'    Possible values are:
 #'    "Everyone",
 #'    "Excluded from cohort",
@@ -147,13 +147,26 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 18 rows and 5 columns.
 #' \describe{
-#'   \item{GR_TYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{GRTYPE}{`<int>` a code that maps to the rest of the columns}
 #'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
 #'   \item{Award Sought}{`<fct>`
 #'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
 #'   Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
-#'   \item{Award Level}{`chr` the actual credential a person earned, with the same options as above}
+#'   \item{Award Level}{`<chr>` the actual credential a person earned, with the same options as above}
 #'   \item{Time to Award}{`<fct>` Relative to the normal completion time. Values are "<=100%", "==125%", "<=150%", and "==150%".}
+#' }
+#' 
+#' ### Assistance
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 4 rows and 3 columns.
+#' \describe{
+#'   \item{PSGRTYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GLOSSARIES_FOR_GR_TYPES"
@@ -164,14 +177,14 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 74 rows and 8 columns.
 #' \describe{
-#'   \item{varNumber}{`int` a code for mapping from raw data to this table.}
-#'   \item{varName}{`chr` a seven-character name for each variable}
-#'   \item{varTitle}{`chr` a human-readable name for each variable}
-#'   \item{DataType}{`chr` "N" for data and "A" for metadata}
-#'   \item{format Time}{`dbl` either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
-#'   \item{Race/Ethnicity}{`chr` The OMB racial/ethnic category for people counted by this variable}
-#'   \item{Sex}{`chr` The OMB gender category for people counted by this variable}
-#'   \item{longDescription}{`chr` a verbose explanation of the variable}
+#'   \item{varNumber}{`<int>` a code for mapping from raw data to this table.}
+#'   \item{varName}{`<chr>` a seven-character name for each variable}
+#'   \item{varTitle}{`<chr>` a human-readable name for each variable}
+#'   \item{DataType}{`<chr>` "N" for data and "A" for metadata}
+#'   \item{format Time}{`<dbl>` either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
+#'   \item{Race/Ethnicity}{`<chr>` The OMB racial/ethnic category for people counted by this variable}
+#'   \item{Sex}{`<chr>` The OMB gender category for people counted by this variable}
+#'   \item{longDescription}{`<chr>` a verbose explanation of the variable}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GR_VARIABLES"
@@ -182,9 +195,10 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 26 rows and 3 columns.
 #' \describe{
-#'   \item{varname}{`chr` a seven-character name for each variable}
-#'   \item{Assistance}{`chr` The type of financial assistance (if any) students received}
-#'   \item{Measure}{`chr` The quantity reported by the column}
+#'   \item{varname}{`<chr>` a seven-character name for each variable}
+#'   \item{Assistance}{`<chr>` The type of financial assistance (if any) students received}
+#'   \item{Role}{`<chr>` Whether the `Measure` is for the whole "Cohort" or for specific "Completers"}
+#'   \item{Measure}{`<chr>` The quantity reported by the column}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GR_PELL_SSL_VARIABLES"

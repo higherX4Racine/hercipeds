@@ -23,8 +23,9 @@ reference:
     gather and summarize information about who has earned credentials
   contents:
   - read_completers
-  - read_graduation_rates
+  - read_graduates
   - read_graduates_and_assistance
+  - read_graduates_and_demographics
   - read_outcomes
   - GLOSSARY_OF_AWARDS
   - GLOSSARIES_FOR_GR_TYPES

@@ -11,9 +11,10 @@ An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
 with 26 rows and 3 columns.
 \describe{
-\item{varname}{\code{chr} a seven-character name for each variable}
-\item{Assistance}{\code{chr} The type of financial assistance (if any) students received}
-\item{Measure}{\code{chr} The quantity reported by the column}
+\item{varname}{\verb{<chr>} a seven-character name for each variable}
+\item{Assistance}{\verb{<chr>} The type of financial assistance (if any) students received}
+\item{Role}{\verb{<chr>} Whether the \code{Measure} is for the whole "Cohort" or for specific "Completers"}
+\item{Measure}{\verb{<chr>} The quantity reported by the column}
 }
 }
 }

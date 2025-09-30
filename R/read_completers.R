@@ -100,7 +100,9 @@ read_completers <- function(.path, .spec){
                 .cols = tidyselect::starts_with("AWLEVEL")
             ) |>
             dplyr::inner_join(
-                hercipeds::AWLEVEL,
+                dplyr::select(hercipeds::GLOSSARY_OF_AWARDS,
+                              "AWLEVEL",
+                              "Award Level"),
                 by = "AWLEVEL"
             )
     }

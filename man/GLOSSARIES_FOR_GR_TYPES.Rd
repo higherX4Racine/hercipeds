@@ -7,7 +7,7 @@
 \format{
 \subsection{\code{GLOSSARIES_FOR_GR_TYPES}}{
 
-A list of two data frames.
+A list of three data frames.
 \subsection{Cohort}{
 
 An object of class \code{spec_tbl_df}
@@ -15,13 +15,13 @@ An object of class \code{spec_tbl_df}
 with 28 rows and 4 columns.
 
 \describe{
-\item{GR_TYPE}{\verb{<int>} a code that maps to the rest of the columns}
+\item{GRTYPE}{\verb{<int>} a code that maps to the rest of the columns}
 \item{Years}{\verb{<int>} Whether the cohort comes from a 2- or 4-year institution.}
 \item{Award Sought}{\verb{<fct>}
 Cohorts are defined by their institution and the type of award their students enrolled to earn.
 Values include "Certificate," "Associate's," "Bachelor's," or "Any." }
 \item{Statistic}{\verb{<fct>}
-The quantity reported in rows with this GR_TYPE code.
+The quantity reported in rows with this GRTYPE code.
 Possible values are:
 "Everyone",
 "Excluded from cohort",
@@ -39,13 +39,27 @@ An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
 with 18 rows and 5 columns.
 \describe{
-\item{GR_TYPE}{\verb{<int>} a code that maps to the rest of the columns}
+\item{GRTYPE}{\verb{<int>} a code that maps to the rest of the columns}
 \item{Years}{\verb{<int>} Whether the cohort comes from a 2- or 4-year institution.}
 \item{Award Sought}{\verb{<fct>}
 Cohorts are defined by their institution and the type of award their students enrolled to earn.
 Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
-\item{Award Level}{\code{chr} the actual credential a person earned, with the same options as above}
+\item{Award Level}{\verb{<chr>} the actual credential a person earned, with the same options as above}
 \item{Time to Award}{\verb{<fct>} Relative to the normal completion time. Values are "<=100\%", "==125\%", "<=150\%", and "==150\%".}
+}
+}
+
+\subsection{Assistance}{
+
+An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
+with 4 rows and 3 columns.
+\describe{
+\item{PSGRTYPE}{\verb{<int>} a code that maps to the rest of the columns}
+\item{Years}{\verb{<int>} Whether the cohort comes from a 2- or 4-year institution.}
+\item{Award Sought}{\verb{<fct>}
+Cohorts are defined by their institution and the type of award their students enrolled to earn.
+Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
 }
 }
 

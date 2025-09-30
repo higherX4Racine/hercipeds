@@ -38,7 +38,7 @@ read_outcomes <- function(.year, .path){
                                   values_to = .y)
         ) |>
         purrr::map(
-            ~ .join_and_drop_keys(.MEASURE_SPEC,
+            \(.x) unpack_variable(.MEASURE_SPEC,
                                   .x,
                                   "Column")
         )

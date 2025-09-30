@@ -11,14 +11,14 @@ An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
 with 74 rows and 8 columns.
 \describe{
-\item{varNumber}{\code{int} a code for mapping from raw data to this table.}
-\item{varName}{\code{chr} a seven-character name for each variable}
-\item{varTitle}{\code{chr} a human-readable name for each variable}
-\item{DataType}{\code{chr} "N" for data and "A" for metadata}
-\item{format Time}{\code{dbl} either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
-\item{Race/Ethnicity}{\code{chr} The OMB racial/ethnic category for people counted by this variable}
-\item{Sex}{\code{chr} The OMB gender category for people counted by this variable}
-\item{longDescription}{\code{chr} a verbose explanation of the variable}
+\item{varNumber}{\verb{<int>} a code for mapping from raw data to this table.}
+\item{varName}{\verb{<chr>} a seven-character name for each variable}
+\item{varTitle}{\verb{<chr>} a human-readable name for each variable}
+\item{DataType}{\verb{<chr>} "N" for data and "A" for metadata}
+\item{format Time}{\verb{<dbl>} either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
+\item{Race/Ethnicity}{\verb{<chr>} The OMB racial/ethnic category for people counted by this variable}
+\item{Sex}{\verb{<chr>} The OMB gender category for people counted by this variable}
+\item{longDescription}{\verb{<chr>} a verbose explanation of the variable}
 }
 }
 }

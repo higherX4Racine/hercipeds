@@ -1,7 +1,7 @@
 Package: hercipeds
 Title: Work with data from the Integrated Postsecondary Education Data System
 Version: 0.0.0.9000
-Authors@R:c(
+Authors@R: c(
     person("Ben", "Taft", , "ben.taft@career2cradle.org", role = c("aut", "cre")),
     person("Higher Expectations for Racine County", role = "cph")
   )
@@ -30,6 +30,7 @@ Imports:
     utils
 Suggests: 
     testthat (>= 3.0.0),
+    tibble,
     withr
 Config/testthat/edition: 3
 Depends: 

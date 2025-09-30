@@ -9,6 +9,7 @@ GR_PELL_SSL_VARIABLES <- "extdata" |>
         col_types = c(
             varname = "c",
             Assistance = "c",
+            Role = "c",
             Measure = "c",
             .default = "-"
         )
