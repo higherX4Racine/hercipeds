@@ -2,6 +2,7 @@
 
 export(fetch_annual_database)
 export(fetch_ipeds_table)
+export(find_yearly_tables)
 export(read_cip_codes)
 export(read_completers)
 export(read_directory)

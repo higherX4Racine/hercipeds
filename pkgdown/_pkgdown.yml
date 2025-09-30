@@ -15,6 +15,7 @@ reference:
   contents:
   - fetch_annual_database
   - fetch_ipeds_table
+  - find_yearly_tables
   - read_directory
   - unpack_variable
   
