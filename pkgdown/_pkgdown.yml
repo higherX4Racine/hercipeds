@@ -16,6 +16,7 @@ reference:
   - fetch_annual_database
   - fetch_ipeds_table
   - read_directory
+  - unpack_variable
   
 - subtitle: Postsecondary completion
   desc: >
@@ -25,10 +26,10 @@ reference:
   - read_graduation_rates
   - read_graduates_and_assistance
   - read_outcomes
-  - AWLEVEL
+  - GLOSSARY_OF_AWARDS
+  - GLOSSARIES_FOR_GR_TYPES
   - GR_VARIABLES
   - GR_PELL_SSL_VARIABLES
-  - GRTYPE
   - OMCHRT
 
 - subtitle: Subject areas

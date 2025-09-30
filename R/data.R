@@ -1,17 +1,27 @@
+## Copyright (C) 2025 by Higher Expectations for Racine County
+
 #' Higher Education Award Levels in IPEDS
 #' 
 #' Integer codes for the different kinds of degrees that students may earn.
+#' Every different table in IPEDS has a slightly different way of labeling
+#' credentials like certificates or degrees.
+#' This table attempts to connect them into a single, semi-coherent, system.
 #' 
-#' @format ## `AWLEVEL`
+#' @format ## `GLOSSARY_OF_AWARDS`
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 16 rows and 2 columns.
+#' with 16 rows and 7 columns.
 #' \describe{
-#' \item{AWLEVEL}{`int` Code value for a degree type}
-#' \item{Award Level}{`chr` Human-readable name for a degree type}
+#'   \item{Award Level       }{`<int>` a 4-digit code that captures AWLEVEL and Stage}
+#'   \item{AWLEVEL           }{`<int>` essentially the primary key, mostly reflects the order of awards in terms of credits required}
+#'   \item{CIP_LEVEL         }{`<chr>` mostly integer codes that are similar to AWLEVEL, except for some short certificates}
+#'   \item{Consolidated Level}{`<chr>` short labels derived from documentation for Completers tables. Take with a grain of salt.}
+#'   \item{Credential        }{`<fct>` either "Certificate" or "Degree"}
+#'   \item{Stage             }{`<fct>` either "Undergraduate" or "Graduate"}
+#'   \item{Label             }{`<chr>` a long description of the specific award}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"AWLEVEL"
+"GLOSSARY_OF_AWARDS"
 
 #' Cohort details for counting 4-, 6-, and 8-year completion dates
 #' 
@@ -104,21 +114,49 @@
 "CIP_PROGRAMS"
 
 #' Mapping details about credentials and success from a complex field in the table of graduation rates.
-#' @format ## `GRTYPE`
+#' @format ## `GLOSSARIES_FOR_GR_TYPES`
+#' A list of two data frames.
+#'
+#' ### Cohort
+#' 
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 40 rows and 7 columns.
+#' with 28 rows and 4 columns.
+#' 
 #' \describe{
-#'   \item{GRTYPE}{`int` a code that maps to the rest of the columns}
-#'   \item{Institution Level}{`chr` either "4-year" or "2-year"}
-#'   \item{Credential Sought}{`chr` the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
-#'   \item{Credential Earned}{`chr` the actual credential a person earned, with the same options as above}
-#'   \item{Relative Time}{`dbl` The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
-#'   \item{Status}{`chr` The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
-#'   \item{Definition}{`chr` the definition from the IPEDs dictionary file.}
+#'   \item{GR_TYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate," "Associate's," "Bachelor's," or "Any." }
+#'   \item{Statistic}{`<fct>`
+#'    The quantity reported in rows with this GR_TYPE code.
+#'    Possible values are:
+#'    "Everyone",
+#'    "Excluded from cohort",
+#'    "Adjusted cohort",
+#'    "Transferred out",
+#'    "Still enrolled",
+#'    "No longer enrolled".
+#'    }
+#' }
+#' 
+#' ### Completers
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 18 rows and 5 columns.
+#' \describe{
+#'   \item{GR_TYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
+#'   \item{Award Level}{`chr` the actual credential a person earned, with the same options as above}
+#'   \item{Time to Award}{`<fct>` Relative to the normal completion time. Values are "<=100%", "==125%", "<=150%", and "==150%".}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"GRTYPE"
+"GLOSSARIES_FOR_GR_TYPES"
 
 #' Definitions of columns found in data that describes postsecondary completers
 #' @format ## `GR_VARIABLES`

@@ -2,18 +2,70 @@
 % Please edit documentation in R/read_graduation_rates.R
 \name{read_graduation_rates}
 \alias{read_graduation_rates}
-\title{Load IPEDS data about graduation rates.}
+\title{Load IPEDS data about graduation rates}
 \usage{
-read_graduation_rates(.year, .path)
+read_graduation_rates(.file)
 }
 \arguments{
-\item{.year}{\verb{<int>} the academic year that the information describes}
-
-\item{.path}{\verb{<chr>} the full path to the zip archive that contains the file.}
+\item{.file}{\verb{<chr>} the full path to the  file.}
 }
 \value{
-a tibble of many columns
+#' An object of class \code{spec_tbl_df}
+(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}). See Details.
 }
 \description{
-Load IPEDS data about graduation rates.
+The graduation data come in two tables.
+One reports graduation numbers by race/ethnicity/immigration status and sex.
+The other reports graduation by type of financial assistance.
+Both tables report numbers of students and graduates, and break down by
+degree sought and granting institution.
+Each file describes one graduation year, so the enrollment year is different
+for 2- and 4-year programs.
+}
+\details{
+\subsection{Graduation rates by demographic groupings}{
+
+These data include many different breakdowns, including degree sought, actual
+degree earned, several different times to completion and demographic
+information such as race/ethnicity, immigration status, and gender.
+When you call this function with the "demographic" table option, the output
+is a data frame with 15 columns.
+tibble \link{1,672,260 × 15} (S3: tbl_df/tbl/data.frame)
+\describe{
+\item{UNITID            }{\verb{<int>} a seven digit unique identifier for a school}
+\item{Index             }{\verb{<int>} the }
+\item{Institution Level }{\verb{<chr>}}
+\item{Credential Sought }{\verb{<chr>}}
+\item{Credential Earned }{\verb{<chr>}}
+\item{Relative Time     }{\verb{<chr>}}
+\item{Race/Ethnicity    }{\verb{<chr>}}
+\item{Sex               }{\verb{<chr>}}
+\item{Adjusted Cohort   }{\verb{<int>}}
+\item{Completed         }{\verb{<int>}}
+\item{Transferred       }{\verb{<int>}}
+\item{Full Cohort       }{\verb{<int>}}
+\item{Still Enrolled    }{\verb{<int>}}
+\item{No Longer Enrolled}{\verb{<int>}}
+\item{Excluded          }{\verb{<int>}}
+}
+}
+
+\subsection{Graduation rates by financial assistance}{
+
+These data all deal with graduation within 150\% of normal completion time.
+That means 6 years for bachelor's programs and 3 years for associate's.
+When you call this function with the "financial" table option, the output is
+a data frame with 9 columns.
+\describe{
+\item{UNITID             }{\verb{<int>} a seven digit unique identifier for a school}
+\item{PSGRTYPE           }{\verb{<int>} a one-digit code describing the type of credential earned}
+\item{Assistance         }{\verb{<chr>} the type of assistance that students receive, if any}
+\item{Revised Cohort     }{\verb{<int>} an overestimate of the number of students who could have graduated}
+\item{Exclusions         }{\verb{<int>} the number of students who should be removed from the denominator}
+\item{Adjusted Cohort    }{\verb{<int>} a better estimate of the number of students who could have graduated}
+\item{Bachelor's Degrees }{\verb{<int>} the number of students who earned a 4-year degree}
+\item{Associate's Degrees}{\verb{<int>} the number of students who earned a degree that took fewer than 4 years}
+\item{All Degrees        }{\verb{<int>} the total number of undegraduate degrees earned}
+}
+}
 }
