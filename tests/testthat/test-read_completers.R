@@ -6,7 +6,7 @@ test_that("the example completion table is readable", {
                   "c0099_c.csv",
                   row.names = FALSE)
         zip("C0099_C.zip", "c0099_c.csv")
-        grads <- read_completers(99, ".", "C")
+        grads <- read_completers("C0099_C.zip", "C")
         expect_equal(nrow(grads), 119L)
         expect_equal(ncol(grads), 7L)
         expect_equal(names(grads),

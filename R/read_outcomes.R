@@ -2,8 +2,8 @@
 
 #' Load IPEDS data about 4-, 6-, and 8-year completion rates.
 #'
-#' @param .year *&lt;int&gt;* the academic year that the information describes
-#' @param .path *&lt;chr&gt;* the full path to the zip archive that contains the file.
+#' @param .year `<int>` the academic year that the information describes
+#' @param .path `<chr>` the full path to the zip archive that contains the file.
 #'
 #' @return a tibble of many columns
 #' @seealso [archive::archive_read()]
@@ -38,7 +38,7 @@ read_outcomes <- function(.year, .path){
                                   values_to = .y)
         ) |>
         purrr::map(
-            ~ .join_and_drop_keys(.MEASURE_SPEC,
+            \(.x) unpack_variable(.MEASURE_SPEC,
                                   .x,
                                   "Column")
         )
@@ -47,9 +47,9 @@ read_outcomes <- function(.year, .path){
         purrr::pluck(
             "Common"
         ) |>
-        .join_and_drop_keys(hercipeds::OMCHRT,
-                            "OMCHRT") |>
-        .join_and_drop_keys(
+        unpack_variable(hercipeds::OMCHRT,
+                        "OMCHRT") |>
+        unpack_variable(
             dplyr::inner_join(.measures$Count,
                               .measures$Percent,
                               by = c("Index", .MEASURE_COLUMNS)),
@@ -58,24 +58,4 @@ read_outcomes <- function(.year, .path){
         dplyr::mutate(
             `Fall Year` = .year - 8L
         )
-}
-
-## Helpers
-
-
-#' A common task is to connect to tables by a common foreign key, then drop the key
-#'
-#' @param .lhs one table
-#' @param .rhs another one to join it to
-#' @param .keys the column(s) to join them by
-#'
-#' @return a new table
-#' @importFrom dplyr inner_join
-#' @importFrom dplyr select
-#' @importFrom tidyselect any_of
-#' @keywords internal
-.join_and_drop_keys <- function(.lhs, .rhs, .keys){
-    .lhs |>
-        dplyr::inner_join(.rhs, by = .keys) |>
-        dplyr::select(!tidyselect::any_of(.keys))
 }

@@ -1,17 +1,27 @@
+## Copyright (C) 2025 by Higher Expectations for Racine County
+
 #' Higher Education Award Levels in IPEDS
 #' 
 #' Integer codes for the different kinds of degrees that students may earn.
+#' Every different table in IPEDS has a slightly different way of labeling
+#' credentials like certificates or degrees.
+#' This table attempts to connect them into a single, semi-coherent, system.
 #' 
-#' @format ## `AWLEVEL`
+#' @format ## `GLOSSARY_OF_AWARDS`
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 16 rows and 2 columns.
+#' with 16 rows and 7 columns.
 #' \describe{
-#' \item{AWLEVEL}{*&lt;int&gt;* Code value for a degree type}
-#' \item{Award Level}{*&lt;chr&gt;* Human-readable name for a degree type}
+#'   \item{Award Level       }{`<int>` a 4-digit code that captures AWLEVEL and Stage}
+#'   \item{AWLEVEL           }{`<int>` essentially the primary key, mostly reflects the order of awards in terms of credits required}
+#'   \item{CIP_LEVEL         }{`<chr>` mostly integer codes that are similar to AWLEVEL, except for some short certificates}
+#'   \item{Consolidated Level}{`<chr>` short labels derived from documentation for Completers tables. Take with a grain of salt.}
+#'   \item{Credential        }{`<fct>` either "Certificate" or "Degree"}
+#'   \item{Stage             }{`<fct>` either "Undergraduate" or "Graduate"}
+#'   \item{Label             }{`<chr>` a long description of the specific award}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"AWLEVEL"
+"GLOSSARY_OF_AWARDS"
 
 #' Cohort details for counting 4-, 6-, and 8-year completion dates
 #' 
@@ -22,10 +32,10 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 15 rows and 4 columns.
 #' \describe{
-#' \item{OMCHRT}{*&lt;int&gt;* Code value for cohort type}
-#' \item{Entry Status}{*&lt;chr&gt;* All, First-time, or Not-first-time}
-#' \item{Time Status}{*&lt;chr&gt;* All, Full-time, or Part-time}
-#' \item{Aid Status}{*&lt;chr&gt;* All, Pell recipient, or not Pell recipient}
+#' \item{OMCHRT}{`<int>` Code value for cohort type}
+#' \item{Entry Status}{`<chr>` All, First-time, or Not-first-time}
+#' \item{Time Status}{`<chr>` All, Full-time, or Part-time}
+#' \item{Aid Status}{`<chr>` All, Pell recipient, or not Pell recipient}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "OMCHRT"
@@ -104,21 +114,62 @@
 "CIP_PROGRAMS"
 
 #' Mapping details about credentials and success from a complex field in the table of graduation rates.
-#' @format ## `GRTYPE`
+#' @format ## `GLOSSARIES_FOR_GR_TYPES`
+#' A list of three data frames.
+#'
+#' ### Cohort
+#' 
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 40 rows and 7 columns.
+#' with 28 rows and 4 columns.
+#' 
 #' \describe{
-#'   \item{GRTYPE}{*&lt;int&gt;* a code that maps to the rest of the columns}
-#'   \item{Institution Level}{*&lt;chr&gt;* either "4-year" or "2-year"}
-#'   \item{Credential Sought}{*&lt;chr&gt;* the original degree a person sought: "Any," "Certificate," "Associate's," or "Bachelor's."}
-#'   \item{Credential Earned}{*&lt;chr&gt;* the actual credential a person earned, with the same options as above}
-#'   \item{Relative Time}{*&lt;dbl&gt;* The ratio of the time it took to complete the degree to the expected time to complete the degree, e.g. finishing a Bachelor's degree in 6 years counts as 1.5}
-#'   \item{Status}{*&lt;chr&gt;* The state students are in to be counted in this GRTYPE. E.g. "Completed," "Still Enrolled," or "Transferred"}
-#'   \item{Definition}{*&lt;chr&gt;* the definition from the IPEDs dictionary file.}
+#'   \item{GRTYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate," "Associate's," "Bachelor's," or "Any." }
+#'   \item{Statistic}{`<fct>`
+#'    The quantity reported in rows with this GRTYPE code.
+#'    Possible values are:
+#'    "Everyone",
+#'    "Excluded from cohort",
+#'    "Adjusted cohort",
+#'    "Transferred out",
+#'    "Still enrolled",
+#'    "No longer enrolled".
+#'    }
+#' }
+#' 
+#' ### Completers
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 18 rows and 5 columns.
+#' \describe{
+#'   \item{GRTYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
+#'   \item{Award Level}{`<chr>` the actual credential a person earned, with the same options as above}
+#'   \item{Time to Award}{`<fct>` Relative to the normal completion time. Values are "<=100%", "==125%", "<=150%", and "==150%".}
+#' }
+#' 
+#' ### Assistance
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 4 rows and 3 columns.
+#' \describe{
+#'   \item{PSGRTYPE}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Years}{`<int>` Whether the cohort comes from a 2- or 4-year institution.}
+#'   \item{Award Sought}{`<fct>`
+#'   Cohorts are defined by their institution and the type of award their students enrolled to earn.
+#'   Values include "Certificate", "Associate's", "Bachelor's", or "Any degree" }
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"GRTYPE"
+"GLOSSARIES_FOR_GR_TYPES"
 
 #' Definitions of columns found in data that describes postsecondary completers
 #' @format ## `GR_VARIABLES`
@@ -126,14 +177,28 @@
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
 #' with 74 rows and 8 columns.
 #' \describe{
-#'   \item{varNumber}{*&lt;int&gt;* a code for mapping from raw data to this table.}
-#'   \item{varName}{*&lt;chr&gt;* a seven-character name for each variable}
-#'   \item{varTitle}{*&lt;chr&gt;* a human-readable name for each variable}
-#'   \item{DataType}{*&lt;chr&gt;* "N" for data and "A" for metadata}
-#'   \item{format Time}{*&lt;dbl&gt;* either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
-#'   \item{Race/Ethnicity}{*&lt;chr&gt;* The OMB racial/ethnic category for people counted by this variable}
-#'   \item{Sex}{*&lt;chr&gt;* The OMB gender category for people counted by this variable}
-#'   \item{longDescription}{*&lt;chr&gt;* a verbose explanation of the variable}
+#'   \item{varNumber}{`<int>` a code for mapping from raw data to this table.}
+#'   \item{varName}{`<chr>` a seven-character name for each variable}
+#'   \item{varTitle}{`<chr>` a human-readable name for each variable}
+#'   \item{DataType}{`<chr>` "N" for data and "A" for metadata}
+#'   \item{format Time}{`<dbl>` either "Cont" (count or continuous) or "Disc" (numeric or character categories)}
+#'   \item{Race/Ethnicity}{`<chr>` The OMB racial/ethnic category for people counted by this variable}
+#'   \item{Sex}{`<chr>` The OMB gender category for people counted by this variable}
+#'   \item{longDescription}{`<chr>` a verbose explanation of the variable}
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GR_VARIABLES"
+
+#' Metadata about postsecondary completion by publicly-funded financial assistance
+#' @format ## `GR_PELL_SSL_VARIABLES`
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 26 rows and 3 columns.
+#' \describe{
+#'   \item{varname}{`<chr>` a seven-character name for each variable}
+#'   \item{Assistance}{`<chr>` The type of financial assistance (if any) students received}
+#'   \item{Role}{`<chr>` Whether the `Measure` is for the whole "Cohort" or for specific "Completers"}
+#'   \item{Measure}{`<chr>` The quantity reported by the column}
+#' }
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"GR_PELL_SSL_VARIABLES"

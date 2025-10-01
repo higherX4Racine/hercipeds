@@ -14,20 +14,24 @@ reference:
     utilties for any kinds of [IPEDS](https://nces.ed.gov/ipeds) data
   contents:
   - fetch_annual_database
+  - fetch_ipeds_table
+  - find_yearly_tables
   - read_directory
+  - unpack_variable
   
 - subtitle: Postsecondary completion
   desc: >
     gather and summarize information about who has earned credentials
   contents:
   - read_completers
-  - read_graduation_rates
+  - read_graduates
+  - read_graduates_and_assistance
+  - read_graduates_and_demographics
   - read_outcomes
-  - unzip_completers
-  - wrangle_completers
-  - AWLEVEL
+  - GLOSSARY_OF_AWARDS
+  - GLOSSARIES_FOR_GR_TYPES
   - GR_VARIABLES
-  - GRTYPE
+  - GR_PELL_SSL_VARIABLES
   - OMCHRT
 
 - subtitle: Subject areas

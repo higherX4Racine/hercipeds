@@ -1,0 +1,27 @@
+﻿varnumber,varname,DataType,Fieldwidth,format,imputationvar,varTitle,Assistance,Role,Statistic
+1,UNITID,N,6,Cont,,Unique identification number of the institution,,,
+81501,PSGRTYPE,N,3,Disc,,Cohort type,,,
+81506,PGREVCT,N,6,Cont,XPGREVCT,Pell Grant recipients - revised cohort,Pell Grant,Cohort,Revised Cohort
+81511,PGEXCLU,N,6,Cont,XPGEXCLU,Pell Grant recipients - exclusions,Pell Grant,Cohort,Exclusions
+81516,PGADJCT,N,6,Cont,XPGADJCT,Pell Grant recipients - adjusted  cohort (revised minus exclusions),Pell Grant,Cohort,Adjusted Cohort
+81521,PGCMBAC,N,6,Cont,XPGCMBAC,Pell Grant  recipients - number that completed a bachelor's or equivalent degree within 150% of normal time,Pell Grant,Completers,Bachelor's Degrees
+81526,PGCMOBA,N,6,Cont,XPGCMOBA,Pell Grant  recipients - number that completed an award of less than 4 academic years or equivalent within 150% of normal time,Pell Grant,Completers,Associate's Degrees
+81531,PGCMTOT,N,6,Cont,XPGCMTOT,Pell Grant  recipients - total number that completed an award  within 150% of normal time,Pell Grant,Completers,All Degrees
+81536,SSREVCT,N,6,Cont,XSSREVCT,Direct Subsidized Loan recipients not receiving Pell Grants - revised cohort,Direct Subsidized Loan,Cohort,Revised Cohort
+81541,SSEXCLU,N,6,Cont,XSSEXCLU,Direct Subsidized Loan recipients not receiving Pell Grants - exclusions,Direct Subsidized Loan,Cohort,Exclusions
+81546,SSADJCT,N,6,Cont,XSSADJCT,Direct Subsidized Loan recipients not receiving Pell Grants - adjusted cohort (revised minus exclusions),Direct Subsidized Loan,Cohort,Adjusted Cohort
+81551,SSCMBAC,N,6,Cont,XSSCMBAC,Direct Subsidized Loan recipients not receiving Pell Grants - number completed a bachelor's or equivalent within 150% of normal time,Direct Subsidized Loan,Completers,Bachelor's Degrees
+81556,SSCMOBA,N,6,Cont,XSSCMOBA,Direct Subsidized Loan recipients not receiving Pell Grants - number completed an award of less than 4 academic years within 150% of normal time,Direct Subsidized Loan,Completers,Associate's Degrees
+81561,SSCMTOT,N,6,Cont,XSSCMTOT,Direct Subsidized Loan recipients not receiving Pell Grants - total number completed an award within 150% of normal time,Direct Subsidized Loan,Completers,All Degrees
+81566,NRREVCT,N,6,Cont,XNRREVCT,Did not receive Pell grant or Direct Subsidized loan - revised cohort,None,Cohort,Revised Cohort
+81571,NREXCLU,N,6,Cont,XNREXCLU,Did not receive Pell grant or Direct Subsidized loan - exclusions,None,Cohort,Exclusions
+81576,NRADJCT,N,6,Cont,XNRADJCT,Did not receive Pell grant or Direct Subsidized loan - adjusted  cohort (revised minus exclusions),None,Cohort,Adjusted Cohort
+81581,NRCMBAC,N,6,Cont,XNRCMBAC,Did not receive Pell grant or Direct Subsidized loan - number that completed a bachelor's or equivalent degree within 150% of normal time,None,Completers,Bachelor's Degrees
+81586,NRCMOBA,N,6,Cont,XNRCMOBA,Did not receive Pell grant or Direct Subsidized loan - number that completed an award of less than 4 academic years within 150% of normal time,None,Completers,Associate's Degrees
+81591,NRCMTOT,N,6,Cont,XNRCMTOT,Did not receive Pell grant or Direct Subsidized loan - total number that completed an award  within 150% of normal time,None,Completers,All Degrees
+81596,TTREVCT,N,6,Cont,XTTREVCT,Total revised cohort,Any,Cohort,Revised Cohort
+81601,TTEXCLU,N,6,Cont,XTTEXCLU,Total exclusions,Any,Cohort,Exclusions
+81606,TTADJCT,N,6,Cont,XTTADJCT,Total adjusted cohort,Any,Cohort,Adjusted Cohort
+81611,TTCMBAC,N,6,Cont,XTTCMBAC,Total number that completed a bachelor's or equivalent degree within 150% of normal time,Any,Completers,Bachelor's Degrees
+81616,TTCMOBA,N,6,Cont,XTTCMOBA,Total number that completed an award of less than 4 academic years within 150% of normal time,Any,Completers,Associate's Degrees
+81621,TTCMTOT,N,6,Cont,XTTCMTOT,Total number that completed an award  within 150% of normal time,Any,Completers,All Degrees

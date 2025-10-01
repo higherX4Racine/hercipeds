@@ -2,8 +2,8 @@
 
 #' Download an Access-formatted database of IPEDs data for one year
 #'
-#' @param .year *&lt;int&gt;* the starting year the data describe. Usually July-June. 
-#' @param .folder_path *&lt;chr&gt;* the location to save the downloaded files to.
+#' @param .year `<int>` the starting year the data describe. Usually July-June. 
+#' @param .folder_path `<chr>` the location to save the downloaded files to.
 #'
 #' @seealso [curl::curl_download()]
 #' @seealso [httr::HEAD()]
