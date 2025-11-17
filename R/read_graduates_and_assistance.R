@@ -91,8 +91,12 @@ read_graduates_and_assistance <- function(.file){
                 `Award Level` = "Measure",
                 "Count"
             ) |>
+            dplyr::mutate(
+                `Time to Award` = "<=150%"
+            ) |>
             tidyr::nest(
                 Completers = c("Award Level",
+                               "Time to Award",
                                "Count")
             ),
         by = c(
