@@ -12,11 +12,14 @@ A list of five data frames.
 
 An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
-with 27 rows and 2 columns.
+with 27 rows and 4 columns.
 
 \describe{
 \item{EFFYALEV}{\verb{<int>} a code that maps to the rest of the columns}
-\item{Label}{\verb{<chr>} some detail about enrollment status for subdividing students}
+\item{Time}{\verb{<chr>} whether full-time, part-time, or all students}
+\item{Level}{\verb{<chr>} undergraduate, graduate, or all students}
+\item{Goal}{\verb{<chr>} degree-seeking, non-degree-seeking, or all}
+\item{Enrollment}{\verb{<chr>} first-time, transfer, continuing, or all students}
 }
 }
 

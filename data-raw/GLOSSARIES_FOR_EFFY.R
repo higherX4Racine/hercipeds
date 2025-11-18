@@ -1,37 +1,40 @@
 ## Copyright (C) 2025 by Higher Expectations for Racine County
 
 GLOSSARIES_FOR_EFFY <- list(
-    EFFYALEV = tibble::tribble(
-        ~ EFFYALEV, ~ Label,
-         1L,        "All students total",
-         2L,        "Undergraduate total",             
-         3L,        "Degree/certificate-seeking total",
-         4L,        "First time",                      
-         5L,        "Other degree/certificate-seeking",
-        11L,        "Non-degree/certificate-seeking",  
-        12L,        "Graduate",                        
-        19L,        "Transfer-ins",                    
-        20L,        "Continuing",                      
-        21L,        "Full time students total",        
-        22L,        "Full-time undergraduate total",   
-        23L,        "Degree/certificate-seeking total",
-        24L,        "First time",                      
-        25L,        "Other degree/certificate-seeking",
-        31L,        "Non-degree/certificate-seeking",  
-        32L,        "Graduate",                        
-        39L,        "Transfer-ins",                    
-        40L,        "Continuing",                      
-        41L,        "Part time students total",        
-        42L,        "Part-time undergraduate total",   
-        43L,        "Degree/certificate-seeking total",
-        44L,        "First time",                      
-        45L,        "Other degree/certificate-seeking",
-        51L,        "Non-degree/certificate-seeking",  
-        52L,        "Graduate",                        
-        59L,        "Transfer-ins",                    
-        60L,        "Continuing"
-    ),
-    
+    EFFYALEV = tidyr::expand_grid(
+        tibble::tribble(
+            ~ Index, ~ Level,         ~ Goal,       ~ Enrollment,     ~ Label,
+                 1L, "All",           "All",        "All",            "All students total",
+                 2L, "Undergraduate", "All",        "All",            "Undergraduate total",             
+                 3L, "Undergraduate", "Credential", "All",            "Degree/certificate-seeking total",
+                 4L, "Undergraduate", "Credential", "First-time",     "First time",                      
+                 5L, "Undergraduate", "Credential", "Not first-time", "Other degree/certificate-seeking",
+                11L, "Undergraduate", "Non-degree", "Non-degree",     "Non-degree/certificate-seeking",  
+                12L, "Graduate",      "Credential", "Graduate",       "Graduate",                        
+                19L, "Undergraduate", "Credential", "Transfer",       "Transfer-ins",                    
+                20L, "Undergraduate", "Credential", "Continuing",     "Continuing"
+        ),
+        tibble::tribble(
+            ~ Offset, ~ Time,
+                  0L, "All",
+                 20L, "Full",
+                 40L, "Part"
+        )
+    ) |>
+        dplyr::mutate(
+            EFFYALEV = .data$Index + .data$Offset
+        ) |>
+        dplyr::select(
+            "EFFYALEV",
+            "Time",
+            "Level",
+            "Goal",
+            "Enrollment"
+        ) |>
+        dplyr::arrange(
+            .data$EFFYALEV
+        ),
+
     EFFYLEV = tibble::tribble(
         ~ EFFYLEV, ~ `Level of Study`,
         1L,        "Total",

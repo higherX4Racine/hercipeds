@@ -1,34 +1,5 @@
 ## Copyright (C) 2025 by Higher Expectations for Racine County
 
-#' IPEDS data from 2022 for schools with "Cornell" in their names.
-#' @format ## `CORNELLS`
-#' 
-#' A list with two elements.
-#' 
-#' ### Directory
-#' 
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 3 rows and 73 columns.
-#' Detailed characteristics of each institution in 2022.
-#' 
-#' ### Completers
-#' 
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 7 rows and 36 columns.
-#' Graduates in 2022 by population from each institution.
-#' 
-#' ### Outcomes
-#' 
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 20 rows and 54 columns.
-#' Overall 4-, 6-, and 8-year completion from each institution
-#'  
-#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"CORNELLS"
-
 #' Very broad categories of subject areas for post-secondary credentials.
 #' @format ## `CIP_FAMILIES`
 #' 
@@ -73,6 +44,35 @@
 #' @source <https://nces.ed.gov/ipeds/cipcode/resources.aspx>
 "CIP_PROGRAMS"
 
+#' IPEDS data from 2022 for schools with "Cornell" in their names.
+#' @format ## `CORNELLS`
+#' 
+#' A list with two elements.
+#' 
+#' ### Directory
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 3 rows and 73 columns.
+#' Detailed characteristics of each institution in 2022.
+#' 
+#' ### Completers
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 7 rows and 36 columns.
+#' Graduates in 2022 by population from each institution.
+#' 
+#' ### Outcomes
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 20 rows and 54 columns.
+#' Overall 4-, 6-, and 8-year completion from each institution
+#'  
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"CORNELLS"
+
 #' Mapping details about enrollment from a complex field in the table of head counts.
 #' @format ## `GLOSSARIES_FOR_EFFY`
 #' A list of five data frames.
@@ -81,11 +81,14 @@
 #' 
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 27 rows and 2 columns.
+#' with 27 rows and 4 columns.
 #' 
 #' \describe{
 #'   \item{EFFYALEV}{`<int>` a code that maps to the rest of the columns}
-#'   \item{Label}{`<chr>` some detail about enrollment status for subdividing students}
+#'   \item{Time}{`<chr>` whether full-time, part-time, or all students}
+#'   \item{Level}{`<chr>` undergraduate, graduate, or all students}
+#'   \item{Goal}{`<chr>` degree-seeking, non-degree-seeking, or all}
+#'   \item{Enrollment}{`<chr>` first-time, transfer, continuing, or all students}
 #' }
 #' 
 #' ### EFFYLEV
