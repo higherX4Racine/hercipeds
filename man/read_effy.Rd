@@ -16,8 +16,8 @@ a tibble with 6 or 7 columns
 \item{EFFYALEV}{\verb{<int?>} indicates a narrow student subpopulation in later years}
 \item{EFFYLEV}{\verb{<int>} indicates undegrad, grad, or all students}
 \item{LSTUDY}{\verb{<int>} indicates undegrad, grad, or all students}
-\item{EFFYPOP}{\verb{<chr>} 4-letter codes for several race/ethnicity/origin populations}
-\item{EFFYSEX}{\verb{<chr>} 1-letter codes for gender identities}
+\item{Population}{\verb{<chr>} one of several race/ethnicity/origin populations}
+\item{Sex}{\verb{<chr>} gender identities}
 \item{Students}{\verb{<int>} the number of students}
 }
 }

@@ -44,28 +44,17 @@ with 3 rows and 2 columns.
 }
 }
 
-\subsection{Population}{
+\subsection{EFY}{
 
 An object of class \code{spec_tbl_df}
 (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
-with 14 rows and 2 columns.
+with 34 rows and 4 columns.
 
 \describe{
-\item{EFFPOP}{\verb{<int>} a code that maps to the rest of the columns}
-\item{Description}{\verb{<chr>} The population description from the dictionary file}
+\item{EFY}{\verb{<int>} a 7- or 7-letter code that maps to the rest of the columns}
 \item{Population}{\verb{<chr>} A population name similar to those from OMB97}
-}
-}
-
-\subsection{Sex}{
-
-An object of class \code{spec_tbl_df}
-(inherits from \code{tbl_df}, \code{tbl}, \code{data.frame})
-with 4 rows and 2 columns.
-
-\describe{
-\item{EFFYSEX}{\verb{<chr>} a one-letter code that maps to the rest of the columns}
-\item{Sex}{\verb{<chr>} All, Female, Male, or a disastrous mess that attempts to deal with non-binary genders.}
+\item{Sex}{\verb{<chr>} Female, male, all, or another gender identity}
+\item{Description}{\verb{<chr>} The population description from the dictionary file}
 }
 }
 

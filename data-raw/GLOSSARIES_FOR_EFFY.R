@@ -47,35 +47,49 @@ GLOSSARIES_FOR_EFFY <- list(
         999L,     "Total"
     ),
     
-    Populations =  tibble::tribble(
-        ~ EFFYPOP, ~ Description,                                ~ Population,
-        "TOTL",     "Grand Total",                                "All",
-        "AIAN",     "American Indian or Alaska Native",           NA,
-        "ASIA",     "Asian",                                      NA,
-        "BKAA",     "Black or African American",                  NA,
-        "HISP",     "Hispanic or Latino",                         NA,
-        "NHPI",     "Native Hawaiian or Other Pacific Islanders", NA,
-        "WHIT",     "White",                                      NA,
-        "2MOR",     "Two or more races",                          NA,
-        "UNKN",     "Unknown",                                    "Race/ethnicity unknown",
-        "NRAL",     "Nonresident Alien",                          "Nonresident",
-        "GUU",      NA,                                           NA,
-        "GUA",      NA,                                           NA,
-        "GUTO",     NA,                                           NA,
-        "GUK",      NA,                                           NA
+    EFY = tibble::tribble(
+        ~ EFYPOP, ~ Description,                                ~ Population,
+        "TOTL",   "Grand Total",                                "All",
+        "AIAN",   "American Indian or Alaska Native",            NA,
+        "ASIA",   "Asian",                                       NA,
+        "BKAA",   "Black or African American",                   NA,
+        "HISP",   "Hispanic or Latino",                          NA,
+        "NHPI",   "Native Hawaiian or Other Pacific Islanders",  NA,
+        "WHIT",   "White",                                       NA,
+        "2MOR",   "Two or more races",                           NA,
+        "UNKN",   "Unknown",                                     "Race/ethnicity unknown",
+        "NRAL",   "Nonresident Alien",                           "Nonresident",
     ) |>
         dplyr::mutate(
             Population = dplyr::coalesce(.data$Population,
                                          .data$Description)
-        ),
-    
-    Sex = tibble::tribble(
-        ~ EFFYSEX, ~ Sex,
-        "T",       "All",
-        "M",       "Male",
-        "W",       "Female",
-        "N",       NA
-    )
+        ) |>
+        tidyr::expand_grid(
+            tibble::tribble(
+                ~ EFYSEX, ~ Sex,
+                "T",      "All",
+                "M",      "Male",
+                "W",      "Female"
+            )
+        ) |>
+        dplyr::bind_rows(
+            tibble::tribble(
+                ~ EFYPOP, ~ EFYSEX, ~ Population, ~ Description,                                 ~ Sex,
+                "GUU",    "N",      "All",        "Gender Unknown",                              "Unknown",
+                "GUA",    "N",      "All",        "Another Gender",                              "Another",
+                "GUTO",   "T",      "All",        "Total of gender unknown and another gender",  "Unknown and Another",
+                "GUK",    "N",      "All",        "Total mutually exclusive binary (men/women)", "Binary"
+            )
+        ) |>
+        dplyr::mutate(
+            EFY = paste0("EFY", .data$EFYPOP, .data$EFYSEX)
+        ) |>
+        dplyr::select(
+            "EFY",
+            "Population",
+            "Sex",
+            "Description"
+        )
 )
-
+    
 usethis::use_data(GLOSSARIES_FOR_EFFY, overwrite = TRUE)

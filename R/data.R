@@ -1,45 +1,5 @@
 ## Copyright (C) 2025 by Higher Expectations for Racine County
 
-#' Higher Education Award Levels in IPEDS
-#' 
-#' Integer codes for the different kinds of degrees that students may earn.
-#' Every different table in IPEDS has a slightly different way of labeling
-#' credentials like certificates or degrees.
-#' This table attempts to connect them into a single, semi-coherent, system.
-#' 
-#' @format ## `GLOSSARY_OF_AWARDS`
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 16 rows and 7 columns.
-#' \describe{
-#'   \item{Award Level       }{`<int>` a 4-digit code that captures AWLEVEL and Stage}
-#'   \item{AWLEVEL           }{`<int>` essentially the primary key, mostly reflects the order of awards in terms of credits required}
-#'   \item{CIP_LEVEL         }{`<chr>` mostly integer codes that are similar to AWLEVEL, except for some short certificates}
-#'   \item{Consolidated Level}{`<chr>` short labels derived from documentation for Completers tables. Take with a grain of salt.}
-#'   \item{Credential        }{`<fct>` either "Certificate" or "Degree"}
-#'   \item{Stage             }{`<fct>` either "Undergraduate" or "Graduate"}
-#'   \item{Label             }{`<chr>` a long description of the specific award}
-#' }
-#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"GLOSSARY_OF_AWARDS"
-
-#' Cohort details for counting 4-, 6-, and 8-year completion dates
-#' 
-#' Integer codes for different combinations of first-time, full-time, and financial aid statuses
-#' 
-#' @format ## `OMCHRT`
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 15 rows and 4 columns.
-#' \describe{
-#' \item{OMCHRT}{`<int>` Code value for cohort type}
-#' \item{Entry Status}{`<chr>` All, First-time, or Not-first-time}
-#' \item{Time Status}{`<chr>` All, Full-time, or Part-time}
-#' \item{Aid Status}{`<chr>` All, Pell recipient, or not Pell recipient}
-#' }
-#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
-"OMCHRT"
-
 #' IPEDS data from 2022 for schools with "Cornell" in their names.
 #' @format ## `CORNELLS`
 #' 
@@ -150,27 +110,17 @@
 #'   \item{Original Level of Study}{`<chr>` TOtal, Graduate, or Undergraduate}
 #' }
 #' 
-#' ### Population
+#' ### EFY
 #' 
 #' An object of class `spec_tbl_df`
 #' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 14 rows and 2 columns.
+#' with 34 rows and 4 columns.
 #' 
 #' \describe{
-#'   \item{EFFPOP}{`<int>` a code that maps to the rest of the columns}
-#'   \item{Description}{`<chr>` The population description from the dictionary file}
+#'   \item{EFY}{`<int>` a 7- or 7-letter code that maps to the rest of the columns}
 #'   \item{Population}{`<chr>` A population name similar to those from OMB97}
-#' }
-#' 
-#' ### Sex
-#' 
-#' An object of class `spec_tbl_df`
-#' (inherits from `tbl_df`, `tbl`, `data.frame`)
-#' with 4 rows and 2 columns.
-#' 
-#' \describe{
-#'   \item{EFFYSEX}{`<chr>` a one-letter code that maps to the rest of the columns}
-#'   \item{Sex}{`<chr>` All, Female, Male, or a disastrous mess that attempts to deal with non-binary genders.}
+#'   \item{Sex}{`<chr>` Female, male, all, or another gender identity}
+#'   \item{Description}{`<chr>` The population description from the dictionary file}
 #' }
 #' 
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
@@ -234,6 +184,29 @@
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GLOSSARIES_FOR_GR_TYPES"
 
+#' Higher Education Award Levels in IPEDS
+#' 
+#' Integer codes for the different kinds of degrees that students may earn.
+#' Every different table in IPEDS has a slightly different way of labeling
+#' credentials like certificates or degrees.
+#' This table attempts to connect them into a single, semi-coherent, system.
+#' 
+#' @format ## `GLOSSARY_OF_AWARDS`
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 16 rows and 7 columns.
+#' \describe{
+#'   \item{Award Level       }{`<int>` a 4-digit code that captures AWLEVEL and Stage}
+#'   \item{AWLEVEL           }{`<int>` essentially the primary key, mostly reflects the order of awards in terms of credits required}
+#'   \item{CIP_LEVEL         }{`<chr>` mostly integer codes that are similar to AWLEVEL, except for some short certificates}
+#'   \item{Consolidated Level}{`<chr>` short labels derived from documentation for Completers tables. Take with a grain of salt.}
+#'   \item{Credential        }{`<fct>` either "Certificate" or "Degree"}
+#'   \item{Stage             }{`<fct>` either "Undergraduate" or "Graduate"}
+#'   \item{Label             }{`<chr>` a long description of the specific award}
+#' }
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"GLOSSARY_OF_AWARDS"
+
 #' Definitions of columns found in data that describes postsecondary completers
 #' @format ## `GR_VARIABLES`
 #' An object of class `spec_tbl_df`
@@ -265,3 +238,20 @@
 #' }
 #' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
 "GR_PELL_SSL_VARIABLES"
+
+#' Cohort details for counting 4-, 6-, and 8-year completion dates
+#' 
+#' Integer codes for different combinations of first-time, full-time, and financial aid statuses
+#' 
+#' @format ## `OMCHRT`
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 15 rows and 4 columns.
+#' \describe{
+#' \item{OMCHRT}{`<int>` Code value for cohort type}
+#' \item{Entry Status}{`<chr>` All, First-time, or Not-first-time}
+#' \item{Time Status}{`<chr>` All, Full-time, or Part-time}
+#' \item{Aid Status}{`<chr>` All, Pell recipient, or not Pell recipient}
+#' }
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"OMCHRT"
