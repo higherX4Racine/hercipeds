@@ -113,6 +113,69 @@
 #' @source <https://nces.ed.gov/ipeds/cipcode/resources.aspx>
 "CIP_PROGRAMS"
 
+#' Mapping details about enrollment from a complex field in the table of head counts.
+#' @format ## `GLOSSARIES_FOR_EFFY`
+#' A list of five data frames.
+#'
+#' ### EFFYALEV
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 27 rows and 2 columns.
+#' 
+#' \describe{
+#'   \item{EFFYALEV}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Label}{`<chr>` some detail about enrollment status for subdividing students}
+#' }
+#' 
+#' ### EFFYLEV
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 4 rows and 2 columns.
+#' 
+#' \describe{
+#'   \item{EFFYLEV}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Level of Study}{`<chr>` All, Graduate, Undergraduate, or Detail}
+#' }
+#' 
+#' ### LSTUDY
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 3 rows and 2 columns.
+#' 
+#' \describe{
+#'   \item{LSTUDY}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Original Level of Study}{`<chr>` TOtal, Graduate, or Undergraduate}
+#' }
+#' 
+#' ### Population
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 14 rows and 2 columns.
+#' 
+#' \describe{
+#'   \item{EFFPOP}{`<int>` a code that maps to the rest of the columns}
+#'   \item{Description}{`<chr>` The population description from the dictionary file}
+#'   \item{Population}{`<chr>` A population name similar to those from OMB97}
+#' }
+#' 
+#' ### Sex
+#' 
+#' An object of class `spec_tbl_df`
+#' (inherits from `tbl_df`, `tbl`, `data.frame`)
+#' with 4 rows and 2 columns.
+#' 
+#' \describe{
+#'   \item{EFFYSEX}{`<chr>` a one-letter code that maps to the rest of the columns}
+#'   \item{Sex}{`<chr>` All, Female, Male, or a disastrous mess that attempts to deal with non-binary genders.}
+#' }
+#' 
+#' @source <https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx>
+"GLOSSARIES_FOR_EFFY"
+
 #' Mapping details about credentials and success from a complex field in the table of graduation rates.
 #' @format ## `GLOSSARIES_FOR_GR_TYPES`
 #' A list of three data frames.
