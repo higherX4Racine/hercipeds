@@ -31,7 +31,7 @@ with 4 rows and 2 columns.
 
 \describe{
 \item{EFFYLEV}{\verb{<int>} a code that maps to the rest of the columns}
-\item{Level of Study}{\verb{<chr>} All, Graduate, Undergraduate, or Detail}
+\item{Stage}{\verb{<chr>} All, Graduate, Undergraduate, or Detail}
 }
 }
 
@@ -43,7 +43,7 @@ with 3 rows and 2 columns.
 
 \describe{
 \item{LSTUDY}{\verb{<int>} a code that maps to the rest of the columns}
-\item{Original Level of Study}{\verb{<chr>} TOtal, Graduate, or Undergraduate}
+\item{Original Stage}{\verb{<chr>} TOtal, Graduate, or Undergraduate}
 }
 }
 

@@ -36,7 +36,7 @@ GLOSSARIES_FOR_EFFY <- list(
         ),
 
     EFFYLEV = tibble::tribble(
-        ~ EFFYLEV, ~ `Level of Study`,
+        ~ EFFYLEV, ~ Stage,
         1L,        "Total",
         2L,        "Undergraduate",
         4L,        "Graduate",
@@ -44,7 +44,7 @@ GLOSSARIES_FOR_EFFY <- list(
     ),
     
     LSTUDY = tibble::tribble(
-        ~ LSTUDY, ~ `Original Level of Study`,
+        ~ LSTUDY, ~ `Original Stage`,
         1L,       "Undergraduate",
         3L,       "Graduate",
         999L,     "Total"
