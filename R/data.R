@@ -99,7 +99,7 @@
 #' 
 #' \describe{
 #'   \item{EFFYLEV}{`<int>` a code that maps to the rest of the columns}
-#'   \item{Level of Study}{`<chr>` All, Graduate, Undergraduate, or Detail}
+#'   \item{Stage}{`<chr>` All, Graduate, Undergraduate, or Detail}
 #' }
 #' 
 #' ### LSTUDY
@@ -110,7 +110,7 @@
 #' 
 #' \describe{
 #'   \item{LSTUDY}{`<int>` a code that maps to the rest of the columns}
-#'   \item{Original Level of Study}{`<chr>` TOtal, Graduate, or Undergraduate}
+#'   \item{Original Stage}{`<chr>` TOtal, Graduate, or Undergraduate}
 #' }
 #' 
 #' ### EFY
