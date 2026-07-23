@@ -34,6 +34,13 @@ reference:
   - GR_PELL_SSL_VARIABLES
   - OMCHRT
 
+- subtitle: Full-time, Full-year, Enrollment
+  desc: >
+    Counts of students who are on the traditional enrollment track
+  contents:
+  - GLOSSARIES_FOR_EFFY
+  - read_effy
+
 - subtitle: Subject areas
   desc: >
     Information about who studied different subjects.

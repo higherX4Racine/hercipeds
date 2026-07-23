@@ -14,7 +14,7 @@ find_yearly_tables(.path, .prefix, .suffix = "", ...)
 \item{.suffix}{\verb{<chr?>} an optional suffix to file names. Defaults to ""}
 
 \item{...}{
-  Arguments passed on to \code{\link[base:list.files]{base::dir}}
+  Arguments passed on to \code{\link[base:dir]{base::dir}}
   \describe{
     \item{\code{all.files}}{a logical value.  If \code{FALSE}, only the
     names of visible files are returned (following Unix-style visibility,
@@ -29,6 +29,8 @@ find_yearly_tables(.path, .prefix, .suffix = "", ...)
     recursive listings?  (They always are in non-recursive ones).}
     \item{\code{no..}}{logical.  Should both \code{"."} and \code{".."} be excluded
     also from non-recursive listings?}
+    \item{\code{fixed}}{logical.  If \code{TRUE}, treat \code{pattern} as a literal
+    string to match rather than a regular expression.}
   }}
 }
 \value{

@@ -18,5 +18,5 @@ a tibble of many columns
 Identity and overall characteristics of institutions of higher education
 }
 \seealso{
-\code{\link[readr:read_delim]{readr::read_csv()}}
+\code{\link[readr:read_csv]{readr::read_csv()}}
 }
